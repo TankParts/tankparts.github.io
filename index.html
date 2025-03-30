@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Links</title>
+  <link rel="icon" href="https://launch.wallarano-ps.vic.edu.au/images/drive.png" type="image/png">
+</head>
+<body>
+  <header class="main-header">
+    <h1>Student Links</h1>
+  </header>
+
+  <section class="google-search">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" />
+    <form id="googleForm" action="https://www.google.com/search" method="GET" target="_blank">
+      <input type="text" name="q" id="googleInput" placeholder="Search Google..." required />
+      <input type="hidden" name="safe" value="active" /> <!-- SafeSearch enabled -->
+      <div class="button-group">
+        <button type="submit">Google Search</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="controls">
+    <div style="position: relative; width: 100%; max-width: 400px;">
+      <input type="text" id="searchInput" placeholder="Search links..." />
+      <ul id="autocomplete-list" class="autocomplete-list"></ul>
+    </div>
+
+    <div id="tag-filters">
+      <label><input type="checkbox" value="Staff" class="tag-checkbox"> Staff</label>
+      <label><input type="checkbox" value="Student" class="tag-checkbox"> Student</label>
+      <label><input type="checkbox" value="Admin" class="tag-checkbox"> Admin</label>
+      <label><input type="checkbox" value="None" class="tag-checkbox"> None</label>
+    </div>
+
+    <div class="tag-actions">
+      <button id="selectAll">Select All</button>
+      <button id="clearAll">Clear All</button>
+    </div>
+  </section>
+
+  <main>
+    <section class="card-grid" id="app-container"></section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 Primary School</p>
+  </footer>
+
+</body>
+</html>
