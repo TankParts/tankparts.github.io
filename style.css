@@ -278,7 +278,7 @@
   
   .custom-tooltip {
     position: absolute;
-    top: -45px;
+    top: -55px;             /* 👈 moved higher up */
     left: 0;
     transform: none;
     background: rgba(50, 50, 50, 0.9);
