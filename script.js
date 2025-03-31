@@ -101,19 +101,17 @@ window.addEventListener("DOMContentLoaded", () => {
     const appNameBold = `<strong>${app.name}</strong>`;
     switch (app.loginType) {
       case "edupass":
-        return `🔑 Use your <strong>eduPass account</strong> to log in to ${appNameBold}.`;
+        return `${appNameBold} uses your <strong>eduPass account</strong> to log in.`;
       case "school":
-        return `🏫 Use your <strong>school account</strong> to log in to ${appNameBold}.`;
+        return `${appNameBold} uses your <strong>school account</strong> to log in.`;
       case "other":
-        return `👩‍🏫 Use the account your teacher gave you to log in to ${appNameBold}.`;
+        return `${appNameBold} uses the account your teacher gave you.`;
       case "none":
-        return `✅ You don’t need to log in to ${appNameBold}.`;
+        return `You don’t need to log in to ${appNameBold}.`;
       default:
-        return `❓ Ask your teacher how to log in to ${appNameBold}.`;
+        return `Ask your teacher how to log in to ${appNameBold}.`;
     }
   }
-  
-  
   
   function renderApps(appList) {
     container.innerHTML = "";
