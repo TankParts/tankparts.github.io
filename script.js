@@ -1,60 +1,82 @@
 window.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("googleInput");
-    input?.focus();
-  
-    const toggleBtn = document.getElementById("toggleTags");
-    const tagContainer = document.getElementById("tag-container");
-  
-    // Toggle filters visibility
-    toggleBtn.addEventListener("click", () => {
-      const isHidden = tagContainer.classList.toggle("hidden");
-      toggleBtn.textContent = isHidden ? "▼" : "▲";
-    });
-  
-    // Parse URL parameters
-    const { user, search } = getURLParameters();
-    setUserFilters(user);
-    setSearchFilter(search);
-  
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', filterApps);
-      });
+  const input = document.getElementById("googleInput");
+  input?.focus();
+
+  const toggleBtn = document.getElementById("toggleTags");
+  const tagContainer = document.getElementById("tag-container");
+
+  // Toggle filters visibility
+  toggleBtn.addEventListener("click", () => {
+    const isHidden = tagContainer.classList.toggle("hidden");
+    toggleBtn.textContent = isHidden ? "▼" : "▲";
+  });
+
+  // Parse URL parameters
+  const { user, search, hideRoleTags, hideLoginTags, hideKeys } = getURLParameters();
+  setUserFilters(user);
+  setSearchFilter(search);
+
+  // Apply initial states to checkboxes
+  document.getElementById("hideRoleTags").checked = hideRoleTags;
+  document.getElementById("hideLoginTags").checked = hideLoginTags;
+  document.getElementById("hideKeys").checked = hideKeys;
+
+  // Apply visibility based on checkboxes
+  toggleRoleTags(hideRoleTags);
+  toggleLoginTags(hideLoginTags);
+  toggleKeyIcons(hideKeys);
+
+  // Event listeners for manual changes
+  document.getElementById("hideRoleTags").addEventListener("change", e => {
+    toggleRoleTags(e.target.checked);
+  });
+
+  document.getElementById("hideLoginTags").addEventListener("change", e => {
+    toggleLoginTags(e.target.checked);
+  });
+
+  document.getElementById("hideKeys").addEventListener("change", e => {
+    toggleKeyIcons(e.target.checked);
+  });
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', filterApps);
+  });
+
+  filterApps();
+});
+
+// 👇 Add these helper functions outside DOMContentLoaded
+function toggleRoleTags(hide) {
+  document.querySelectorAll(".badge-row").forEach(row => {
+    row.style.display = hide ? "none" : "";
+  });
+}
+
+function toggleLoginTags(hide) {
+  document.querySelectorAll(".login-row").forEach(row => {
+    row.style.display = hide ? "none" : "";
+  });
+}
+
+function toggleKeyIcons(hide) {
+  document.querySelectorAll(".info-button").forEach(btn => {
+    btn.style.display = hide ? "none" : "";
+  });
+}
+
     
-      filterApps();
-    
-      // 🔽 TEMP checkboxes to hide tags
-      const hideRoleCheckbox = document.getElementById("hideRoleTags");
-      hideRoleCheckbox?.addEventListener("change", () => {
-        const roleRows = document.querySelectorAll(".badge-row");
-        roleRows.forEach(row => {
-          row.style.display = hideRoleCheckbox.checked ? "none" : "";
-        });
-      });
-    
-      const hideLoginCheckbox = document.getElementById("hideLoginTags");
-      hideLoginCheckbox?.addEventListener("change", () => {
-        const loginRows = document.querySelectorAll(".login-row");
-        loginRows.forEach(row => {
-          row.style.display = hideLoginCheckbox.checked ? "none" : "";
-        });
-      });
-    
-      const hideKeyCheckbox = document.getElementById("hideKeys");
-      hideKeyCheckbox?.addEventListener("change", () => {
-        const keyIcons = document.querySelectorAll(".info-button");
-        keyIcons.forEach(btn => {
-          btn.style.display = hideKeyCheckbox.checked ? "none" : "";
-        });
-      });
-    });
-    
   
-  function getURLParameters() {
-    const params = new URLSearchParams(window.location.search);
-    const userParam = params.get('user');
-    const searchParam = params.get('search');
-    return { user: userParam, search: searchParam };
-  }
+    function getURLParameters() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        user: params.get('user'),
+        search: params.get('search'),
+        hideRoleTags: params.get('hideRoleTags') === 'true',
+        hideLoginTags: params.get('hideLoginTags') === 'true',
+        hideKeys: params.get('hideKeys') === 'true'
+      };
+    }
   
   function setUserFilters(userParam) {
     if (userParam) {
