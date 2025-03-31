@@ -359,9 +359,12 @@ window.addEventListener("DOMContentLoaded", () => {
     return words.every(word => name.includes(word) || description.includes(word));
   }
   
+  let currentFocus = -1;
+
   searchInput.addEventListener("input", () => {
     const term = searchInput.value.toLowerCase();
     autocompleteList.innerHTML = "";
+    currentFocus = -1;
   
     if (!term) {
       autocompleteList.style.display = "none";
@@ -374,14 +377,17 @@ window.addEventListener("DOMContentLoaded", () => {
       .slice(0, 5);
   
     if (matches.length > 0) {
-      matches.forEach(app => {
+      matches.forEach((app, index) => {
         const li = document.createElement("li");
         li.textContent = app.name;
+        li.setAttribute("data-index", index);
+  
         li.addEventListener("click", () => {
           searchInput.value = app.name;
           autocompleteList.style.display = "none";
           filterApps();
         });
+  
         autocompleteList.appendChild(li);
       });
       autocompleteList.style.display = "block";
@@ -391,7 +397,38 @@ window.addEventListener("DOMContentLoaded", () => {
   
     filterApps();
   });
+
+  searchInput.addEventListener("keydown", (e) => {
+    const items = autocompleteList.querySelectorAll("li");
+    if (!items.length) return;
   
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      currentFocus++;
+      if (currentFocus >= items.length) currentFocus = 0;
+      updateActive(items);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      currentFocus--;
+      if (currentFocus < 0) currentFocus = items.length - 1;
+      updateActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1) {
+        items[currentFocus].click();
+      }
+    }
+  });
+  
+  function updateActive(items) {
+    items.forEach((item, index) => {
+      item.classList.remove("active");
+      if (index === currentFocus) {
+        item.classList.add("active");
+      }
+    });
+  }
+
   document.addEventListener("click", (e) => {
     if (!autocompleteList.contains(e.target) && e.target !== searchInput) {
       autocompleteList.style.display = "none";

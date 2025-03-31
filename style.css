@@ -340,3 +340,7 @@
     display: none;
   }
   
+  .autocomplete-list li.active {
+    background-color: #d0e0ff;
+  }
+  
