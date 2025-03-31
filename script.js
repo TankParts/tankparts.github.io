@@ -100,13 +100,20 @@ window.addEventListener("DOMContentLoaded", () => {
   function getTooltipText(app) {
     const appNameBold = `<strong>${app.name}</strong>`;
     switch (app.loginType) {
-      case "edupass": return `Log in to ${appNameBold} with your <strong>eduPass Account</strong>.`;
-      case "school": return `Log in to ${appNameBold} with your <strong>School Account</strong>.`;
-      case "other": return `Use the account your teacher gave you to log in to ${appNameBold}.`;
-      case "none": return `You don't need to log in to ${appNameBold}.`;
-      default: return `Ask your teacher how to log in to ${appNameBold}.`;
+      case "edupass":
+        return `🔑 Use your <strong>eduPass account</strong> to log in to ${appNameBold}.`;
+      case "school":
+        return `🏫 Use your <strong>school account</strong> to log in to ${appNameBold}.`;
+      case "other":
+        return `👩‍🏫 Use the account your teacher gave you to log in to ${appNameBold}.`;
+      case "none":
+        return `✅ You don’t need to log in to ${appNameBold}.`;
+      default:
+        return `❓ Ask your teacher how to log in to ${appNameBold}.`;
     }
   }
+  
+  
   
   function renderApps(appList) {
     container.innerHTML = "";
