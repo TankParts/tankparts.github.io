@@ -278,8 +278,9 @@
   
   .custom-tooltip {
     position: absolute;
-    top: -45px;            /* show above the key */
-    right: 10px;           /* same as original horizontal alignment */
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(50, 50, 50, 0.9);
     color: #fff;
     padding: 0.5rem 0.75rem;
