@@ -295,7 +295,9 @@
     z-index: 1000;
     display: none;
     line-height: 1.4;
-    min-height: calc(1.4em * 2); /* force space for 2 lines */
+    min-height: calc(1.4em * 2);  /* 👈 reserves space for 2 lines */
+    display: flex;
+    align-items: center;
   }
   
   .autocomplete-list {
