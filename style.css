@@ -1,365 +1,291 @@
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #f4f6f8;
-    overflow-x: hidden;
-  }
-  
-  main {
-    flex: 1;
-  }
-  
-  .main-header {
-    background: #1976d2;
-    color: white;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .google-search {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-  }
-  
-  .google-search img {
-    width: 160px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  .google-search form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .google-search input[type="text"] {
-    width: 100%;
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-    border-radius: 999px;
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #333;
-    margin-bottom: 1rem;
-    outline: none;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  }
-  
-  .google-search input::placeholder {
-    color: #888;
-  }
-  
-  .google-search .button-group {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .google-search button {
-    background: #f1f1f1;
-    color: #202124;
-    border: 1px solid #dadce0;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  
-  .google-search button:hover {
-    background: #e8e8e8;
-  }
-  
-  .controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem 0 2rem; /* 🆗 Add top and bottom margin */
-    padding: 0 1rem;
-  }  
-  
-  .controls input {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  #tag-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #tag-filters label {
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .tag-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 0.5rem;
-  }
-  
-  .tag-actions button {
-    padding: 0.4rem 0.8rem;
-    border: none;
-    background: #e0e0e0;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    cursor: pointer;
-  }
-  
-  .tag-actions button:hover {
-    background: #d5d5d5;
-  }
-  
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    align-items: stretch;
-    padding: 0 1rem 2rem;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    position: relative;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-  }
-  
-  .card a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .card h2 {
-    font-size: 1.1rem;
-    margin: 0.5rem 0 0.3rem;
-  }
-  
-  .card p {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .app-logo {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
-    margin-bottom: 0.5rem;
-    border-radius: 6px;
-    background-color: #fff;
-  }
-  
-  .badge-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-    width: 100%;
-    gap: 0.5rem;
-  }
-  
-  .badge-row .category-badge {
-    flex: 1 0 0;
-    text-align: center;
-    font-size: 0.75rem;
-    padding: 0.4rem 0.5rem;
-    border-radius: 6px;
-    color: white;
-    white-space: nowrap;
-    min-width: 0;
-  }
-  
-  .category-badge.Student {
-    background-color: #c8e6c9;
-    color: #256029;
-  }
-  
-  .category-badge.Staff {
-    background-color: #bbdefb;
-    color: #0d47a1;
-  }
-  
-  .category-badge.Admin {
-    background-color: #ffcdd2;
-    color: #b71c1c;
-  }
-  
-  .category-badge.None {
-    background-color: #eeeeee;
-    color: #424242;
-  }
-  
-  .login-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 0.5rem;
-    width: 100%;
-    gap: 0.5rem;
-  }
+  box-sizing: border-box;
+}
 
-  .login-row > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .login-row .category-badge {
-    flex: 1 0 0;
-    text-align: center;
-    background-color: #f5f5f5;
-    color: #333;
-    padding: 0.4rem 0.5rem;
-    font-size: 0.75rem;
-    border-radius: 6px;
-    white-space: nowrap;
-    min-width: 0;
-  }
-  
-  .info-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: #555;
-  }
-  
-  .info-button:hover {
-    color: #000;
-  }
-  
-  .main-footer {
-    background: #1976d2;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .custom-tooltip {
-    position: absolute;
-    top: -55px;             /* 👈 moved higher up */
-    left: 0;
-    transform: none;
-    background: rgba(50, 50, 50, 0.9);
-    color: #fff;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    width: 100%;
-    max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    white-space: normal;
-    z-index: 1000;
-    display: none;
-  }
-  
-  .autocomplete-list {
-    list-style: none;
-    margin: 0;
-    padding: 0.5rem 0;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    max-height: 200px;
-    overflow-y: auto;
-    position: absolute;
-    top: 100%; /* places it directly below the input */
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    display: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .autocomplete-list li {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  .autocomplete-list li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* 🔽 NEW: Clean arrow toggle styles */
-  .toggle-filters {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1.25rem;
-    color: #555;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .toggle-filters:hover {
-    color: #000;
-  }
-  
-  .tag-container.hidden {
-    display: none;
-  }
-  
-  .autocomplete-list li.active {
-    background-color: #d0e0ff;
-  }
-  
-  .faded-tag {
-    opacity: 0.4;
-    filter: grayscale(80%);
-  }
-  
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f4f6f8;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+.main-header {
+  background: #1976d2;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 2rem;
+  padding: 0 1rem;
+}
+
+.controls input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#tag-filters label {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tag-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.tag-actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.tag-actions button:hover {
+  background: #d5d5d5;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 0 1rem 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.app-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.badge-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.badge-row .category-badge {
+  flex: 1 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  color: white;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.category-badge.Student {
+  background-color: #c8e6c9;
+  color: #256029;
+}
+
+.category-badge.Staff {
+  background-color: #bbdefb;
+  color: #0d47a1;
+}
+
+.category-badge.Admin {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+.category-badge.None {
+  background-color: #eeeeee;
+  color: #424242;
+}
+
+.login-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.login-row > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.login-row .category-badge {
+  flex: 1 0 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.main-footer {
+  background: #1976d2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-tooltip {
+  position: absolute;
+  top: -55px;
+  left: 0;
+  transform: none;
+  background: rgba(50, 50, 50, 0.9);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  white-space: normal;
+  z-index: 1000;
+  display: none;
+}
+
+.autocomplete-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-list li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.autocomplete-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.toggle-filters {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.25rem;
+  color: #555;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggle-filters:hover {
+  color: #000;
+}
+
+.tag-container.hidden {
+  display: none;
+}
+
+.autocomplete-list li.active {
+  background-color: #d0e0ff;
+}
+
+.faded-tag {
+  opacity: 0.4;
+  filter: grayscale(80%);
+}
