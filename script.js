@@ -179,8 +179,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const loginBadge = document.createElement("span");
       loginBadge.className = "category-badge";
       loginBadge.id = `login-${app.name.replace(/\s+/g, '-')}`;
-      loginBadge.innerHTML = `${formatLoginType(app.loginType)} ${app.loginType !== "none" ? "🔑" : ""}`;
-      loginBadge.title = stripHtml(getTooltipText(app));
+      loginBadge.textContent = formatLoginType(app.loginType);
   
       loginContent.appendChild(loginBadge);
   
