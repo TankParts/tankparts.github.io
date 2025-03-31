@@ -17,28 +17,37 @@ window.addEventListener("DOMContentLoaded", () => {
     setSearchFilter(search);
   
     checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', filterApps);
-    });
-  
-    filterApps();
-  
-    // 🔽 TEMP checkboxes to hide tags
-    const hideRoleCheckbox = document.getElementById("hideRoleTags");
-    hideRoleCheckbox?.addEventListener("change", () => {
-      const roleRows = document.querySelectorAll(".badge-row");
-      roleRows.forEach(row => {
-        row.style.display = hideRoleCheckbox.checked ? "none" : "";
+        checkbox.addEventListener('change', filterApps);
+      });
+    
+      filterApps();
+    
+      // 🔽 TEMP checkboxes to hide tags
+      const hideRoleCheckbox = document.getElementById("hideRoleTags");
+      hideRoleCheckbox?.addEventListener("change", () => {
+        const roleRows = document.querySelectorAll(".badge-row");
+        roleRows.forEach(row => {
+          row.style.display = hideRoleCheckbox.checked ? "none" : "";
+        });
+      });
+    
+      const hideLoginCheckbox = document.getElementById("hideLoginTags");
+      hideLoginCheckbox?.addEventListener("change", () => {
+        const loginRows = document.querySelectorAll(".login-row");
+        loginRows.forEach(row => {
+          row.style.display = hideLoginCheckbox.checked ? "none" : "";
+        });
+      });
+    
+      const hideKeyCheckbox = document.getElementById("hideKeys");
+      hideKeyCheckbox?.addEventListener("change", () => {
+        const keyIcons = document.querySelectorAll(".info-button");
+        keyIcons.forEach(btn => {
+          btn.style.display = hideKeyCheckbox.checked ? "none" : "";
+        });
       });
     });
-  
-    const hideLoginCheckbox = document.getElementById("hideLoginTags");
-    hideLoginCheckbox?.addEventListener("change", () => {
-      const loginRows = document.querySelectorAll(".login-row");
-      loginRows.forEach(row => {
-        row.style.display = hideLoginCheckbox.checked ? "none" : "";
-      });
-    });
-  });
+    
   
   function getURLParameters() {
     const params = new URLSearchParams(window.location.search);
