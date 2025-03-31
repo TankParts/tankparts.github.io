@@ -21,6 +21,23 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   
     filterApps();
+  
+    // 🔽 TEMP checkboxes to hide tags
+    const hideRoleCheckbox = document.getElementById("hideRoleTags");
+    hideRoleCheckbox?.addEventListener("change", () => {
+      const roleRows = document.querySelectorAll(".badge-row");
+      roleRows.forEach(row => {
+        row.style.display = hideRoleCheckbox.checked ? "none" : "";
+      });
+    });
+  
+    const hideLoginCheckbox = document.getElementById("hideLoginTags");
+    hideLoginCheckbox?.addEventListener("change", () => {
+      const loginRows = document.querySelectorAll(".login-row");
+      loginRows.forEach(row => {
+        row.style.display = hideLoginCheckbox.checked ? "none" : "";
+      });
+    });
   });
   
   function getURLParameters() {
@@ -131,23 +148,20 @@ window.addEventListener("DOMContentLoaded", () => {
   
       const badgeRow = document.createElement("div");
       badgeRow.className = "badge-row";
-      
+  
       const selectedTags = getSelectedTags();
       const filteredTags = selectedTags.length === 0
         ? app.tags
         : app.tags.filter(tag => selectedTags.includes(tag));
-      
+  
       const sortedTags = [...filteredTags].sort((a, b) => tagOrder.indexOf(a) - tagOrder.indexOf(b));
-      
+  
       sortedTags.forEach(tag => {
         const tagBadge = document.createElement("span");
         tagBadge.className = `category-badge ${tag}`;
         tagBadge.textContent = tag;
         badgeRow.appendChild(tagBadge);
       });
-      
-      
-      
   
       const loginRow = document.createElement("div");
       loginRow.className = "login-row";
@@ -207,7 +221,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   
   let currentFocus = -1;
-
+  
   searchInput.addEventListener("input", () => {
     const term = searchInput.value.toLowerCase();
     autocompleteList.innerHTML = "";
@@ -244,7 +258,7 @@ window.addEventListener("DOMContentLoaded", () => {
   
     filterApps();
   });
-
+  
   searchInput.addEventListener("keydown", (e) => {
     const items = autocompleteList.querySelectorAll("li");
     if (!items.length) return;
@@ -275,7 +289,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
+  
   document.addEventListener("click", (e) => {
     if (!autocompleteList.contains(e.target) && e.target !== searchInput) {
       autocompleteList.style.display = "none";
