@@ -116,7 +116,7 @@ const apps = [
       url: "https://microbit.org",
       logo: "https://dummyimage.com/150x150/009688/fff&text=micro:bit",
       description: "Tiny programmable device for learning.",
-      tags: ["Student", "None"],
+      tags: ["Student"],
       loginType: "none"
     },
     {
@@ -124,7 +124,7 @@ const apps = [
       url: "https://scratch.mit.edu",
       logo: "https://dummyimage.com/150x150/F44336/fff&text=Scratch",
       description: "Create stories, games, and animations.",
-      tags: ["Student", "None"],
+      tags: ["Student"],
       loginType: "none"
     },
     {
@@ -140,7 +140,7 @@ const apps = [
       url: "https://www.getepic.com",
       logo: "https://dummyimage.com/150x150/FF9800/fff&text=Epic!",
       description: "Online library for students.",
-      tags: ["Student", "None"],
+      tags: ["Student"],
       loginType: "other"
     },
     {
@@ -156,7 +156,8 @@ const apps = [
       url: "https://www.prodigygame.com",
       logo: "https://dummyimage.com/150x150/8BC34A/fff&text=Prodigy",
       description: "Curriculum-aligned math adventure game.",
-      tags: ["Student", "None"],
+      tags: ["Student"],
       loginType: "other"
     }
   ];
+  

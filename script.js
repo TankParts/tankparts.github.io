@@ -95,7 +95,7 @@ window.addEventListener("DOMContentLoaded", () => {
       return;
     }
   
-    const tagOrder = ["Staff", "Student", "Admin", "None"];
+    const tagOrder = ["Staff", "Student", "Admin"];
   
     appList.forEach(app => {
       const card = document.createElement("article");
