@@ -1,159 +1,90 @@
 const apps = [
-    // Student only (10)
     {
-      name: "Google Docs",
-      url: "https://docs.google.com",
-      logo: "https://dummyimage.com/150x150/4285F4/fff&text=Docs",
-      description: "Online word processing by Google.",
-      tags: ["Student"],
-      loginType: "school"
+      name: "Sentral",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Sentral",
+      description: "School management system.",
+      tags: ["Staff", "Admin"],
+      loginType: "edupass"
     },
     {
-      name: "Google Slides",
-      url: "https://slides.google.com",
-      logo: "https://dummyimage.com/150x150/EA4335/fff&text=Slides",
-      description: "Online presentation tool by Google.",
-      tags: ["Student"],
-      loginType: "school"
-    },
-    {
-      name: "Tinkercad",
-      url: "https://www.tinkercad.com",
-      logo: "https://dummyimage.com/150x150/0D47A1/fff&text=Tinkercad",
-      description: "3D design and coding tool.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "micro:bit",
-      url: "https://microbit.org",
-      logo: "https://dummyimage.com/150x150/009688/fff&text=micro:bit",
-      description: "Tiny programmable device for learning.",
-      tags: ["Student"],
-      loginType: "none"
-    },
-    {
-      name: "Scratch",
-      url: "https://scratch.mit.edu",
-      logo: "https://dummyimage.com/150x150/F44336/fff&text=Scratch",
-      description: "Create stories, games, and animations.",
-      tags: ["Student"],
-      loginType: "none"
-    },
-    {
-      name: "PM eCollection",
-      url: "https://pmecollection.com.au",
-      logo: "https://dummyimage.com/150x150/673AB7/fff&text=PM+eBooks",
-      description: "Digital PM readers and quizzes.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "Epic!",
-      url: "https://www.getepic.com",
-      logo: "https://dummyimage.com/150x150/FF9800/fff&text=Epic!",
-      description: "Online library for students.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "Sunshine Online",
-      url: "https://www.sunshineonline.com.au",
-      logo: "https://dummyimage.com/150x150/FFC107/fff&text=Sunshine",
-      description: "Online literacy and numeracy.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "Prodigy",
-      url: "https://www.prodigygame.com",
-      logo: "https://dummyimage.com/150x150/8BC34A/fff&text=Prodigy",
-      description: "Curriculum-aligned math adventure game.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "Code.org",
-      url: "https://code.org",
-      logo: "https://dummyimage.com/150x150/3F51B5/fff&text=Code.org",
-      description: "Learn computer science and coding.",
-      tags: ["Student"],
-      loginType: "none"
-    },
-  
-    // Staff only (5)
-    {
-      name: "Google Forms",
-      url: "https://forms.google.com",
-      logo: "https://dummyimage.com/150x150/FBBC05/fff&text=Forms",
-      description: "Online forms and surveys.",
+      name: "Education Mail",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/0288D1/fff&text=Mail",
+      description: "Department email access.",
       tags: ["Staff"],
-      loginType: "school"
+      loginType: "edupass"
     },
     {
-      name: "Essential Assessment",
-      url: "https://www.essentialassessment.com.au",
-      logo: "https://dummyimage.com/150x150/4CAF50/fff&text=Essential",
-      description: "Assessment and curriculum tools.",
+      name: "eduPay",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/4CAF50/fff&text=eduPay",
+      description: "Staff payroll and HR system.",
       tags: ["Staff"],
-      loginType: "other"
+      loginType: "edupass"
     },
     {
-      name: "ClickView",
-      url: "https://www.clickview.com.au",
-      logo: "https://dummyimage.com/150x150/FF6F00/fff&text=ClickView",
-      description: "Educational videos and resources.",
-      tags: ["Staff"],
-      loginType: "school"
+      name: "School Website",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/455A64/fff&text=Website",
+      description: "Access the school website.",
+      tags: ["Staff", "Student"],
+      loginType: "edupass"
     },
-    {
-      name: "Staff Feedback Tool",
-      url: "https://staff-feedback.school.edu.au",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Feedback",
-      description: "Internal feedback and collaboration.",
-      tags: ["Staff"],
-      loginType: "school"
-    },
-    {
-      name: "Timetable Manager",
-      url: "https://timetable.school.edu.au",
-      logo: "https://dummyimage.com/150x150/795548/fff&text=Timetable",
-      description: "Staff scheduling system.",
-      tags: ["Staff"],
-      loginType: "school"
-    },
-  
-    // Student + Staff (8)
     {
       name: "Google Drive",
       url: "https://drive.google.com",
       logo: "https://dummyimage.com/150x150/4285F4/fff&text=Drive",
-      description: "Cloud storage service by Google.",
-      tags: ["Student", "Staff"],
+      description: "Cloud storage by Google.",
+      tags: ["Staff", "Student", "Admin"],
       loginType: "school"
     },
     {
       name: "Google Mail",
       url: "https://mail.google.com",
       logo: "https://dummyimage.com/150x150/EA4335/fff&text=Gmail",
-      description: "Email service by Google.",
-      tags: ["Student", "Staff"],
+      description: "Email by Google.",
+      tags: ["Staff", "Student"],
       loginType: "school"
     },
     {
       name: "Google Classroom",
       url: "https://classroom.google.com",
       logo: "https://dummyimage.com/150x150/34A853/fff&text=Classroom",
-      description: "Classroom management tool.",
-      tags: ["Student", "Staff"],
+      description: "Manage classrooms online.",
+      tags: ["Staff", "Student"],
+      loginType: "school"
+    },
+    {
+      name: "Google Calendar",
+      url: "https://calendar.google.com",
+      logo: "https://dummyimage.com/150x150/FFA000/fff&text=Calendar",
+      description: "Calendar and scheduling.",
+      tags: ["Staff"],
       loginType: "school"
     },
     {
       name: "Google Meet",
       url: "https://meet.google.com",
       logo: "https://dummyimage.com/150x150/FBBC05/fff&text=Meet",
-      description: "Video conferencing by Google.",
-      tags: ["Student", "Staff"],
+      description: "Video conferencing.",
+      tags: ["Staff", "Student"],
+      loginType: "school"
+    },
+    {
+      name: "Google Docs",
+      url: "https://docs.google.com",
+      logo: "https://dummyimage.com/150x150/4285F4/fff&text=Docs",
+      description: "Word processing.",
+      tags: ["Staff", "Student"],
+      loginType: "school"
+    },
+    {
+      name: "Google Slides",
+      url: "https://slides.google.com",
+      logo: "https://dummyimage.com/150x150/EA4335/fff&text=Slides",
+      description: "Presentation tool.",
+      tags: ["Staff", "Student"],
       loginType: "school"
     },
     {
@@ -161,58 +92,232 @@ const apps = [
       url: "https://sheets.google.com",
       logo: "https://dummyimage.com/150x150/34A853/fff&text=Sheets",
       description: "Spreadsheets by Google.",
-      tags: ["Student", "Staff"],
+      tags: ["Staff", "Student"],
       loginType: "school"
     },
     {
-      name: "Library System",
-      url: "https://library.school.edu.au",
-      logo: "https://dummyimage.com/150x150/9E9E9E/fff&text=Library",
-      description: "Library management and borrowing.",
-      tags: ["Student", "Staff"],
-      loginType: "other"
+      name: "Google Forms",
+      url: "https://forms.google.com",
+      logo: "https://dummyimage.com/150x150/FBBC05/fff&text=Forms",
+      description: "Create forms and quizzes.",
+      tags: ["Staff", "Student"],
+      loginType: "school"
     },
     {
-      name: "Seesaw",
+      name: "Clickview",
+      url: "https://clickview.com.au",
+      logo: "https://dummyimage.com/150x150/FF6F00/fff&text=Clickview",
+      description: "Educational video platform.",
+      tags: ["Staff", "Student"],
+      loginType: "school"
+    },
+    {
+      name: "Epic!",
+      url: "https://www.getepic.com",
+      logo: "https://dummyimage.com/150x150/FF9800/fff&text=Epic",
+      description: "Digital reading library.",
+      tags: ["Staff", "Student"],
+      loginType: "school"
+    },
+    {
+      name: "Quick Links",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/9E9E9E/fff&text=Links",
+      description: "Access useful links.",
+      tags: ["Staff", "Student"],
+      loginType: "school"
+    },
+    {
+      name: "SeeSaw",
       url: "https://web.seesaw.me",
-      logo: "https://dummyimage.com/150x150/FF4081/fff&text=Seesaw",
-      description: "Digital portfolios and communication.",
-      tags: ["Student", "Staff"],
+      logo: "https://dummyimage.com/150x150/FF4081/fff&text=SeeSaw",
+      description: "Digital portfolios.",
+      tags: ["Staff", "Student"],
       loginType: "other"
     },
     {
-      name: "Learning Portal",
-      url: "https://learn.school.edu.au",
-      logo: "https://dummyimage.com/150x150/00BCD4/fff&text=Learn",
-      description: "Online learning hub.",
-      tags: ["Student", "Staff"],
-      loginType: "school"
+      name: "PM eCollection",
+      url: "https://pmecollection.com.au",
+      logo: "https://dummyimage.com/150x150/673AB7/fff&text=PM+eBooks",
+      description: "Digital PM readers.",
+      tags: ["Staff", "Student"],
+      loginType: "other"
     },
-  
-    // Admin only (3)
     {
-      name: "Admin Dashboard",
-      url: "https://admin.school.edu.au",
-      logo: "https://dummyimage.com/150x150/3E2723/fff&text=Admin",
-      description: "Administration and reporting tools.",
-      tags: ["Admin"],
-      loginType: "edupass"
+      name: "SunShine Online",
+      url: "https://www.sunshineonline.com.au",
+      logo: "https://dummyimage.com/150x150/FFC107/fff&text=Sunshine",
+      description: "Literacy and numeracy.",
+      tags: ["Staff", "Student"],
+      loginType: "other"
+    },
+    {
+      name: "Essential Assessment",
+      url: "https://www.essentialassessment.com.au",
+      logo: "https://dummyimage.com/150x150/4CAF50/fff&text=Essential",
+      description: "Online assessments.",
+      tags: ["Staff", "Student"],
+      loginType: "other"
     },
     {
       name: "ACER Testing",
       url: "https://oars.acer.edu.au",
       logo: "https://dummyimage.com/150x150/9C27B0/fff&text=ACER",
-      description: "Online assessment platform.",
-      tags: ["Admin"],
+      description: "Online testing system.",
+      tags: ["Staff", "Student"],
       loginType: "other"
     },
     {
-      name: "Policy Hub",
-      url: "https://policies.school.edu.au",
-      logo: "https://dummyimage.com/150x150/C2185B/fff&text=Policies",
-      description: "Access and manage school policies.",
-      tags: ["Admin"],
+      name: "Tinkercad",
+      url: "https://www.tinkercad.com",
+      logo: "https://dummyimage.com/150x150/0D47A1/fff&text=Tinkercad",
+      description: "3D design and coding tool.",
+      tags: ["Student"],
       loginType: "school"
+    },
+    {
+      name: "Code.org",
+      url: "https://code.org",
+      logo: "https://dummyimage.com/150x150/3F51B5/fff&text=Code.org",
+      description: "Learn coding basics.",
+      tags: ["Student"],
+      loginType: "other"
+    },
+    {
+      name: "micro:bit",
+      url: "https://microbit.org",
+      logo: "https://dummyimage.com/150x150/009688/fff&text=micro:bit",
+      description: "Program tiny devices.",
+      tags: ["Student"],
+      loginType: "other"
+    },
+    {
+      name: "Scratch",
+      url: "https://scratch.mit.edu",
+      logo: "https://dummyimage.com/150x150/F44336/fff&text=Scratch",
+      description: "Create interactive projects.",
+      tags: ["Student"],
+      loginType: "other"
+    },
+    {
+      name: "Prodigy",
+      url: "https://www.prodigygame.com",
+      logo: "https://dummyimage.com/150x150/8BC34A/fff&text=Prodigy",
+      description: "Math game adventure.",
+      tags: ["Student"],
+      loginType: "other"
+    },
+    {
+      name: "School Survey",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Survey",
+      description: "Give feedback on learning.",
+      tags: ["Student"],
+      loginType: "other"
+    },
+    {
+      name: "eSmart Digital License",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eSmart",
+      description: "Learn about online safety.",
+      tags: ["Student"],
+      loginType: "other"
+    },
+    {
+      name: "Pivot Wellbeing Survey",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Pivot",
+      description: "Student wellbeing feedback.",
+      tags: ["Student"],
+      loginType: "other"
+    },
+    {
+      name: "JAMF Cloud",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/455A64/fff&text=JAMF",
+      description: "Device management.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "GSuite Admin",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/546E7A/fff&text=GSuite",
+      description: "Administer Google accounts.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "PaperCut",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Print",
+      description: "Admin printing dashboard.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "IT Asset Management",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Assets",
+      description: "Track school IT equipment.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "Network Status",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Status",
+      description: "Check internet/network status.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "Apple School Manager",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=ASM",
+      description: "Manage Apple devices.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "PFSense",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Firewall",
+      description: "Manage firewall & routing.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "TechAssist",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Tech",
+      description: "IT support tools.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "eduProxy",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Proxy",
+      description: "Manage proxy and filters.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "eduSTAR.MC",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduSTAR",
+      description: "Manage eduSTAR deployments.",
+      tags: ["Admin"],
+      loginType: "none"
+    },
+    {
+      name: "WeKan",
+      url: "#",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=WeKan",
+      description: "Project/task boards for admin.",
+      tags: ["Admin"],
+      loginType: "none"
     }
   ];
   
