@@ -16,6 +16,15 @@ window.addEventListener("DOMContentLoaded", () => {
   
     // Trigger initial filtering based on pre-selected filters
     filterApps();
+  
+    // Toggle tag filter section
+    const toggleBtn = document.getElementById("toggleTags");
+    const tagContainer = document.getElementById("tag-container");
+  
+    toggleBtn.addEventListener("click", () => {
+      tagContainer.classList.toggle("hidden");
+      toggleBtn.textContent = tagContainer.classList.contains("hidden") ? "🔽" : "🔼";
+    });
   });
   
   function getURLParameters() {
