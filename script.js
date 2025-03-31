@@ -114,7 +114,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (appList.length === 0) {
       container.innerHTML = `
         <div style="text-align:center; padding: 2rem;">
-          <img src="https://i.imgur.com/S7YZ3LG.png" alt="No matching apps" style="width: 180px; height: auto; margin-bottom: 1rem;" />
+          <img src="images/no-results.png" alt="No matching apps" style="width: 180px; height: auto; margin-bottom: 1rem;" />
           <p style="font-size: 1.1rem; color: #444;">No apps match your search.</p>
         </div>
       `;
