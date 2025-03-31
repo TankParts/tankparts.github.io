@@ -279,25 +279,21 @@
   .custom-tooltip {
     position: absolute;
     top: -45px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
     background: rgba(50, 50, 50, 0.9);
     color: #fff;
     padding: 0.6rem 1rem;
     border-radius: 6px;
     font-size: 0.8rem;
-    width: max-content;
-    max-width: 90vw;
+    width: 100%;
+    max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     white-space: normal;
     z-index: 1000;
     display: none;
-    line-height: 1.4;
-    min-height: calc(1.4em * 2);  /* 👈 reserves space for 2 lines */
-    display: flex;
-    align-items: center;
   }
   
   .autocomplete-list {
