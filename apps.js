@@ -29,7 +29,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/455A64/fff&text=Website",
       description: "Access the school website.",
       tags: ["Staff", "Student"],
-      loginType: "edupass"
+      loginType: "none"
     },
     {
       name: "Google Drive",
@@ -68,7 +68,7 @@ const apps = [
       url: "https://meet.google.com",
       logo: "https://dummyimage.com/150x150/FBBC05/fff&text=Meet",
       description: "Video conferencing.",
-      tags: ["Staff", "Student"],
+      tags: ["Staff"],
       loginType: "school"
     },
     {
@@ -117,7 +117,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/FF9800/fff&text=Epic",
       description: "Digital reading library.",
       tags: ["Staff", "Student"],
-      loginType: "school"
+      loginType: "other"
     },
     {
       name: "Quick Links",
@@ -125,7 +125,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/9E9E9E/fff&text=Links",
       description: "Access useful links.",
       tags: ["Staff", "Student"],
-      loginType: "school"
+      loginType: "none"
     },
     {
       name: "SeeSaw",
@@ -237,7 +237,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/455A64/fff&text=JAMF",
       description: "Device management.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "school"
     },
     {
       name: "GSuite Admin",
@@ -245,7 +245,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/546E7A/fff&text=GSuite",
       description: "Administer Google accounts.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "school"
     },
     {
       name: "PaperCut",
@@ -253,7 +253,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Print",
       description: "Admin printing dashboard.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "school"
     },
     {
       name: "IT Asset Management",
@@ -261,7 +261,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Assets",
       description: "Track school IT equipment.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "school"
     },
     {
       name: "Network Status",
@@ -269,7 +269,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Status",
       description: "Check internet/network status.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "other"
     },
     {
       name: "Apple School Manager",
@@ -277,7 +277,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=ASM",
       description: "Manage Apple devices.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "other"
     },
     {
       name: "PFSense",
@@ -285,7 +285,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Firewall",
       description: "Manage firewall & routing.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "other"
     },
     {
       name: "TechAssist",
@@ -293,7 +293,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Tech",
       description: "IT support tools.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "school"
     },
     {
       name: "eduProxy",
@@ -301,7 +301,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Proxy",
       description: "Manage proxy and filters.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "edupass"
     },
     {
       name: "eduSTAR.MC",
@@ -309,7 +309,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduSTAR",
       description: "Manage eduSTAR deployments.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "edupass"
     },
     {
       name: "WeKan",
@@ -317,7 +317,7 @@ const apps = [
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=WeKan",
       description: "Project/task boards for admin.",
       tags: ["Admin"],
-      loginType: "none"
+      loginType: "other"
     }
   ];
   
