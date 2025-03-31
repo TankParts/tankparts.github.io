@@ -5,59 +5,64 @@ window.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggleTags");
     const tagContainer = document.getElementById("tag-container");
   
+    // Toggle filters visibility
     toggleBtn.addEventListener("click", () => {
       const isHidden = tagContainer.classList.toggle("hidden");
       toggleBtn.textContent = isHidden ? "▼" : "▲";
     });
   
+    // Parse URL parameters
     const { user, search } = getURLParameters();
     setUserFilters(user);
     setSearchFilter(search);
   
     checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', filterApps);
-    });
-  
-    filterApps();
-  
-    const hideRoleCheckbox = document.getElementById("hideRoleTags");
-    hideRoleCheckbox?.addEventListener("change", () => {
-      const roleRows = document.querySelectorAll(".badge-row");
-      roleRows.forEach(row => {
-        row.style.display = hideRoleCheckbox.checked ? "none" : "";
+        checkbox.addEventListener('change', filterApps);
+      });
+    
+      filterApps();
+    
+      // 🔽 TEMP checkboxes to hide tags
+      const hideRoleCheckbox = document.getElementById("hideRoleTags");
+      hideRoleCheckbox?.addEventListener("change", () => {
+        const roleRows = document.querySelectorAll(".badge-row");
+        roleRows.forEach(row => {
+          row.style.display = hideRoleCheckbox.checked ? "none" : "";
+        });
+      });
+    
+      const hideLoginCheckbox = document.getElementById("hideLoginTags");
+      hideLoginCheckbox?.addEventListener("change", () => {
+        const loginRows = document.querySelectorAll(".login-row");
+        loginRows.forEach(row => {
+          row.style.display = hideLoginCheckbox.checked ? "none" : "";
+        });
+      });
+    
+      const hideKeyCheckbox = document.getElementById("hideKeys");
+      hideKeyCheckbox?.addEventListener("change", () => {
+        const keyIcons = document.querySelectorAll(".info-button");
+        keyIcons.forEach(btn => {
+          btn.style.display = hideKeyCheckbox.checked ? "none" : "";
+        });
       });
     });
-  
-    const hideLoginCheckbox = document.getElementById("hideLoginTags");
-    hideLoginCheckbox?.addEventListener("change", () => {
-      const loginRows = document.querySelectorAll(".login-row");
-      loginRows.forEach(row => {
-        row.style.display = hideLoginCheckbox.checked ? "none" : "";
-      });
-    });
-  
-    const hideKeyCheckbox = document.getElementById("hideKeys");
-    hideKeyCheckbox?.addEventListener("change", () => {
-      const keyIcons = document.querySelectorAll(".info-button");
-      keyIcons.forEach(btn => {
-        btn.style.display = hideKeyCheckbox.checked ? "none" : "";
-      });
-    });
-  });
+    
   
   function getURLParameters() {
     const params = new URLSearchParams(window.location.search);
-    return {
-      user: params.get('user'),
-      search: params.get('search')
-    };
+    const userParam = params.get('user');
+    const searchParam = params.get('search');
+    return { user: userParam, search: searchParam };
   }
   
   function setUserFilters(userParam) {
     if (userParam) {
       const selectedRoles = userParam.split(',');
       checkboxes.forEach(cb => {
-        if (selectedRoles.includes(cb.value)) cb.checked = true;
+        if (selectedRoles.includes(cb.value)) {
+          cb.checked = true;
+        }
       });
     }
   }
@@ -175,14 +180,14 @@ window.addEventListener("DOMContentLoaded", () => {
       loginContent.style.justifyContent = "space-between";
       loginContent.style.alignItems = "center";
       loginContent.style.width = "100%";
-  
+      
       const loginBadge = document.createElement("span");
       loginBadge.className = "category-badge";
       loginBadge.id = `login-${app.name.replace(/\s+/g, '-')}`;
       loginBadge.textContent = formatLoginType(app.loginType);
-  
+      
       loginContent.appendChild(loginBadge);
-  
+      
       if (app.loginType !== "none") {
         const infoButton = document.createElement("button");
         infoButton.className = "info-button inline-key";
@@ -195,8 +200,22 @@ window.addEventListener("DOMContentLoaded", () => {
         });
         loginContent.appendChild(infoButton);
       }
-  
+      
       loginRow.appendChild(loginContent);
+      
+  
+      if (app.loginType !== "none") {
+        const infoButton = document.createElement("button");
+        infoButton.className = "info-button";
+        infoButton.innerHTML = "🔑";
+        infoButton.addEventListener("mouseenter", () => {
+          tooltip.style.display = "block";
+        });
+        infoButton.addEventListener("mouseleave", () => {
+          tooltip.style.display = "none";
+        });
+        card.appendChild(infoButton);
+      }
   
       link.appendChild(badgeRow);
       link.appendChild(loginRow);
@@ -255,11 +274,13 @@ window.addEventListener("DOMContentLoaded", () => {
         const li = document.createElement("li");
         li.textContent = app.name;
         li.setAttribute("data-index", index);
+  
         li.addEventListener("click", () => {
           searchInput.value = app.name;
           autocompleteList.style.display = "none";
           filterApps();
         });
+  
         autocompleteList.appendChild(li);
       });
       autocompleteList.style.display = "block";
@@ -319,3 +340,4 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   
   renderApps(apps);
+  
