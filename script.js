@@ -131,13 +131,21 @@ window.addEventListener("DOMContentLoaded", () => {
   
       const badgeRow = document.createElement("div");
       badgeRow.className = "badge-row";
-      const sortedTags = [...app.tags].sort((a, b) => tagOrder.indexOf(a) - tagOrder.indexOf(b));
+      
+      const selectedTags = getSelectedTags();
+      const filteredTags = selectedTags.length === 0
+        ? app.tags
+        : app.tags.filter(tag => selectedTags.includes(tag));
+      
+      const sortedTags = [...filteredTags].sort((a, b) => tagOrder.indexOf(a) - tagOrder.indexOf(b));
+      
       sortedTags.forEach(tag => {
         const tagBadge = document.createElement("span");
         tagBadge.className = `category-badge ${tag}`;
         tagBadge.textContent = tag;
         badgeRow.appendChild(tagBadge);
       });
+      
   
       const loginRow = document.createElement("div");
       loginRow.className = "login-row";
