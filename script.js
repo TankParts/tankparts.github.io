@@ -175,11 +175,34 @@ window.addEventListener("DOMContentLoaded", () => {
       const loginRow = document.createElement("div");
       loginRow.className = "login-row";
   
+      const loginContent = document.createElement("div");
+      loginContent.style.display = "flex";
+      loginContent.style.justifyContent = "space-between";
+      loginContent.style.alignItems = "center";
+      loginContent.style.width = "100%";
+      
       const loginBadge = document.createElement("span");
       loginBadge.className = "category-badge";
       loginBadge.id = `login-${app.name.replace(/\s+/g, '-')}`;
       loginBadge.textContent = formatLoginType(app.loginType);
-      loginRow.appendChild(loginBadge);
+      
+      loginContent.appendChild(loginBadge);
+      
+      if (app.loginType !== "none") {
+        const infoButton = document.createElement("button");
+        infoButton.className = "info-button inline-key";
+        infoButton.innerHTML = "🔑";
+        infoButton.addEventListener("mouseenter", () => {
+          tooltip.style.display = "block";
+        });
+        infoButton.addEventListener("mouseleave", () => {
+          tooltip.style.display = "none";
+        });
+        loginContent.appendChild(infoButton);
+      }
+      
+      loginRow.appendChild(loginContent);
+      
   
       if (app.loginType !== "none") {
         const infoButton = document.createElement("button");
