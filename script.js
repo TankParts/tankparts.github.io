@@ -2,29 +2,25 @@ window.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("googleInput");
     input?.focus();
   
+    const toggleBtn = document.getElementById("toggleTags");
+    const tagContainer = document.getElementById("tag-container");
+  
+    // Toggle filters visibility
+    toggleBtn.addEventListener("click", () => {
+      const isHidden = tagContainer.classList.toggle("hidden");
+      toggleBtn.textContent = isHidden ? "▼" : "▲";
+    });
+  
     // Parse URL parameters
     const { user, search } = getURLParameters();
-  
-    // Set filters based on URL parameters
     setUserFilters(user);
     setSearchFilter(search);
   
-    // Add the checkbox event listeners
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', filterApps);
     });
   
-    // Trigger initial filtering based on pre-selected filters
     filterApps();
-  
-    // Toggle tag filter section
-    const toggleBtn = document.getElementById("toggleTags");
-    const tagContainer = document.getElementById("tag-container");
-  
-    toggleBtn.addEventListener("click", () => {
-      tagContainer.classList.toggle("hidden");
-      toggleBtn.textContent = tagContainer.classList.contains("hidden") ? "🔽" : "🔼";
-    });
   });
   
   function getURLParameters() {
@@ -251,6 +247,7 @@ window.addEventListener("DOMContentLoaded", () => {
   
   function renderApps(appList) {
     container.innerHTML = "";
+  
     if (appList.length === 0) {
       container.innerHTML = `
         <div style="text-align:center; padding: 2rem;">
