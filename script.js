@@ -12,17 +12,9 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   
     // Parse URL parameters
-    const { user, search, hideRoles, hideLogin, hideKeys } = getURLParameters();
+    const { user, search } = getURLParameters();
     setUserFilters(user);
     setSearchFilter(search);
-    
-    hideRoleCheckbox.checked = hideRoles;
-    hideLoginCheckbox.checked = hideLogin;
-    hideKeyCheckbox.checked = hideKeys;
-    
-    hideRoleCheckbox.dispatchEvent(new Event('change'));
-    hideLoginCheckbox.dispatchEvent(new Event('change'));
-    hideKeyCheckbox.dispatchEvent(new Event('change'));
   
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', filterApps);
@@ -57,16 +49,12 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     
   
-    function getURLParameters() {
-      const params = new URLSearchParams(window.location.search);
-      return {
-        user: params.get('user'),
-        search: params.get('search'),
-        hideRoles: params.get('hideRoles') === 'true',
-        hideLogin: params.get('hideLogin') === 'true',
-        hideKeys: params.get('hideKeys') === 'true'
-      };
-    }
+  function getURLParameters() {
+    const params = new URLSearchParams(window.location.search);
+    const userParam = params.get('user');
+    const searchParam = params.get('search');
+    return { user: userParam, search: searchParam };
+  }
   
   function setUserFilters(userParam) {
     if (userParam) {
