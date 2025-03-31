@@ -107,9 +107,9 @@ window.addEventListener("DOMContentLoaded", () => {
       case "other":
         return `${appNameBold} uses the account your teacher gave you.`;
       case "none":
-        return `You don’t need to log in to ${appNameBold}.`;
+        return `${appNameBold} doesn’t need a login.`;
       default:
-        return `Ask your teacher how to log in to ${appNameBold}.`;
+        return `We're not sure how to log in to ${appNameBold} — ask your teacher.`;
     }
   }
   
