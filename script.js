@@ -186,6 +186,14 @@ window.addEventListener("DOMContentLoaded", () => {
       loginBadge.id = `login-${app.name.replace(/\s+/g, '-')}`;
       loginBadge.textContent = formatLoginType(app.loginType);
       
+      // 🧠 Move tooltip events here
+      loginBadge.addEventListener("mouseenter", () => {
+        tooltip.style.display = "block";
+      });
+      loginBadge.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+      });
+      
       loginContent.appendChild(loginBadge);
       
       if (app.loginType !== "none") {
