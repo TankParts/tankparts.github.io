@@ -351,3 +351,8 @@
     background-color: #d0e0ff;
   }
   
+  .faded-tag {
+    opacity: 0.4;
+    filter: grayscale(80%);
+  }
+  
