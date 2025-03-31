@@ -100,11 +100,11 @@ window.addEventListener("DOMContentLoaded", () => {
   function getTooltipText(app) {
     const appNameBold = `<strong>${app.name}</strong>`;
     switch (app.loginType) {
-      case "edupass": return `Login to ${appNameBold} with your <strong>eduPass Account</strong>.`;
-      case "school": return `Login to ${appNameBold} with your <strong>School Account</strong>.`;
-      case "other": return `Login to ${appNameBold} with the account from your teacher.`;
-      case "none": return `${appNameBold} does not require a login.`;
-      default: return `Login info not available.`;
+      case "edupass": return `Log in to ${appNameBold} with your <strong>eduPass account</strong>.`;
+      case "school": return `Log in to ${appNameBold} with your <strong>School account</strong>.`;
+      case "other": return `Use the account your teacher gave you to log in to ${appNameBold}.`;
+      case "none": return `You don't need to log in to ${appNameBold}.`;
+      default: return `Ask your teacher how to log in to ${appNameBold}.`;
     }
   }
   
