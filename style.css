@@ -283,10 +283,13 @@
     transform: translateX(-50%);
     background: rgba(50, 50, 50, 0.9);
     color: #fff;
-    padding: 0.5rem 0.75rem;
+    padding: 0.6rem 1rem;
     border-radius: 6px;
-    font-size: 0.8rem;
-    max-width: 220px;
+    font-size: 0.9rem;
+    width: max-content;
+    max-width: 90vw; /* responsive on small screens */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     white-space: normal;
     z-index: 1000;
