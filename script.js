@@ -21,11 +21,6 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("hideLoginTags").checked = hideLoginTags;
   document.getElementById("hideKeys").checked = hideKeys;
 
-  // Apply visibility based on checkboxes
-  toggleRoleTags(hideRoleTags);
-  toggleLoginTags(hideLoginTags);
-  toggleKeyIcons(hideKeys);
-
   // Event listeners for manual changes
   document.getElementById("hideRoleTags").addEventListener("change", e => {
     toggleRoleTags(e.target.checked);
@@ -40,10 +35,16 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', filterApps);
+    checkbox.addEventListener("change", filterApps);
   });
 
+  // Render apps and then apply visibility toggles
   filterApps();
+
+  // 👇 Apply toggles after elements exist
+  toggleRoleTags(hideRoleTags);
+  toggleLoginTags(hideLoginTags);
+  toggleKeyIcons(hideKeys);
 });
 
 // 👇 Add these helper functions outside DOMContentLoaded
