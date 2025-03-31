@@ -278,7 +278,7 @@
   
   .custom-tooltip {
     position: absolute;
-    top: 35px;
+    bottom: 35px;         /* ⬅ flip from top to bottom */
     right: 10px;
     background: rgba(50, 50, 50, 0.9);
     color: #fff;
