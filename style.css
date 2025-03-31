@@ -27,69 +27,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .google-search {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-  }
-  
-  .google-search img {
-    width: 160px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  .google-search form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .google-search input[type="text"] {
-    width: 100%;
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-    border-radius: 999px;
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #333;
-    margin-bottom: 1rem;
-    outline: none;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  }
-  
-  .google-search input::placeholder {
-    color: #888;
-  }
-  
-  .google-search .button-group {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .google-search button {
-    background: #f1f1f1;
-    color: #202124;
-    border: 1px solid #dadce0;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  
-  .google-search button:hover {
-    background: #e8e8e8;
-  }
-  
   .controls {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin: 2rem 0 2rem; /* 🆗 Add top and bottom margin */
+    margin: 2rem 0 2rem;
     padding: 0 1rem;
   }  
   
@@ -240,7 +183,7 @@
     width: 100%;
     gap: 0.5rem;
   }
-
+  
   .login-row > div {
     display: flex;
     justify-content: space-between;
@@ -261,9 +204,6 @@
   }
   
   .info-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background: transparent;
     border: none;
     font-size: 1.2rem;
@@ -273,6 +213,10 @@
   
   .info-button:hover {
     color: #000;
+  }
+  
+  .inline-key {
+    margin-left: auto;
   }
   
   .main-footer {
@@ -285,7 +229,7 @@
   
   .custom-tooltip {
     position: absolute;
-    top: -55px;             /* 👈 moved higher up */
+    top: -55px;
     left: 0;
     transform: none;
     background: rgba(50, 50, 50, 0.9);
@@ -313,7 +257,7 @@
     max-height: 200px;
     overflow-y: auto;
     position: absolute;
-    top: 100%; /* places it directly below the input */
+    top: 100%;
     left: 0;
     width: 100%;
     z-index: 999;
@@ -330,7 +274,6 @@
     background-color: #f0f0f0;
   }
   
-  /* 🔽 NEW: Clean arrow toggle styles */
   .toggle-filters {
     background: transparent;
     border: none;
