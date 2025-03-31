@@ -323,14 +323,17 @@
   .toggle-filters {
     background: #ffffff;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 0.5rem;
+    border-radius: 8px;     /* match input radius */
+    padding: 0 1rem;         /* horizontal padding only */
     font-size: 1rem;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    height: 40px;            /* match input height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 1;
   }
+  
   
   .toggle-filters:hover {
     background: #f0f0f0;
