@@ -1,323 +1,110 @@
+/**
+ * ==============================
+ * Student Links App List Example
+ * ==============================
+ * 
+ * This file defines an array called `apps`, which contains a list of web-based
+ * applications used in a school setting.
+ * 
+ * Each app is represented as an object with the following properties:
+ * 
+ * - name:        (string) Display name of the application
+ * - url:         (string) Link to open when the app is clicked
+ * - logo:        (string) Path to the logo image displayed on the app card
+ * - description: (string) Short text describing the app's purpose
+ * - tags:        (array of strings) Categories the app belongs to. Valid tags:
+ *                   - "Student"
+ *                   - "Staff"
+ *                   - "Admin"
+ * - loginType:   (string) Indicates the type of login required. Possible values:
+ *                   - "edupass" → Requires an eduPass account
+ *                   - "school"  → Requires a school-based account
+ *                   - "other"   → Requires some other type of login (e.g. class code)
+ *                   - "none"    → No login required
+ * 
+ * This array is used by the JavaScript UI to dynamically generate app cards,
+ * filter them by tags or search, and show login tooltips.
+ */
+
 const apps = [
-    {
-      name: "Sentral",
-      url: "https://wallaranops.sentral.com.au/",
-      logo: "assets/images/app_logos/sentral.png",
-      description: "School management system.",
-      tags: ["Staff", "Admin"],
-      loginType: "edupass"
-    },
-    {
-      name: "Education Mail",
-      url: "#",
-      logo: "assets/images/app_logos/edumail.png",
-      description: "Department email access.",
-      tags: ["Staff"],
-      loginType: "edupass"
-    },
-    {
-      name: "eduPay",
-      url: "#",
-      logo: "assets/images/app_logos/edupay.png",
-      description: "Staff payroll and HR system.",
-      tags: ["Staff"],
-      loginType: "edupass"
-    },
-    {
-      name: "Wallarano Primary School",
-      url: "#",
-      logo: "assets/images/app_logos/wallarano.png",
-      description: "Access the school website.",
-      tags: ["Staff", "Student"],
-      loginType: "none"
-    },
-    {
-      name: "Google Drive",
-      url: "https://drive.google.com/",
-      logo: "assets/images/app_logos/drive.png",
-      description: "Cloud storage by Google.",
-      tags: ["Staff", "Student", "Admin"],
-      loginType: "school"
-    },
-    {
-      name: "Google Mail",
-      url: "https://mail.google.com",
-      logo: "assets/images/app_logos/gmail.png",
-      description: "Email by Google.",
-      tags: ["Staff", "Student"],
-      loginType: "school"
-    },
-    {
-      name: "Google Classroom",
-      url: "https://classroom.google.com",
-      logo: "assets/images/app_logos/classroom.png",
-      description: "Manage classrooms online.",
-      tags: ["Staff", "Student"],
-      loginType: "school"
-    },
-    {
-      name: "Google Calendar",
-      url: "https://calendar.google.com",
-      logo: "assets/images/app_logos/calendar.png",
-      description: "Calendar and scheduling.",
-      tags: ["Staff"],
-      loginType: "school"
-    },
-    {
-      name: "Google Meet",
-      url: "https://meet.google.com",
-      logo: "assets/images/app_logos/meet.png",
-      description: "Video conferencing.",
-      tags: ["Staff"],
-      loginType: "school"
-    },
-    {
-      name: "Google Docs",
-      url: "https://docs.google.com",
-      logo: "assets/images/app_logos/gdocs.png",
-      description: "Word processing.",
-      tags: ["Staff", "Student"],
-      loginType: "school"
-    },
-    {
-      name: "Google Slides",
-      url: "https://slides.google.com",
-      logo: "assets/images/app_logos/gslides.png",
-      description: "Presentation tool.",
-      tags: ["Staff", "Student"],
-      loginType: "school"
-    },
-    {
-      name: "Google Sheets",
-      url: "https://sheets.google.com",
-      logo: "assets/images/app_logos/sheets.png",
-      description: "Spreadsheets by Google.",
-      tags: ["Staff", "Student"],
-      loginType: "school"
-    },
-    {
-      name: "Google Forms",
-      url: "https://forms.google.com",
-      logo: "assets/images/app_logos/forms.png",
-      description: "Create forms and quizzes.",
-      tags: ["Staff", "Student"],
-      loginType: "school"
-    },
-    {
-      name: "Clickview",
-      url: "https://clickview.com.au",
-      logo: "assets/images/app_logos/clickview.png",
-      description: "Educational video platform.",
-      tags: ["Staff", "Student"],
-      loginType: "school"
-    },
-    {
-      name: "Epic!",
-      url: "https://www.getepic.com",
-      logo: "assets/images/app_logos/epic.png",
-      description: "Digital reading library.",
-      tags: ["Staff", "Student"],
-      loginType: "other"
-    },
-    {
-      name: "Quick Links",
-      url: "#",
-      logo: "assets/images/app_logos/quicklinks.png",
-      description: "Access useful links.",
-      tags: ["Staff", "Student"],
-      loginType: "none"
-    },
-    {
-      name: "SeeSaw",
-      url: "https://web.seesaw.me",
-      logo: "assets/images/app_logos/seesaw.png",
-      description: "Digital portfolios.",
-      tags: ["Staff", "Student"],
-      loginType: "other"
-    },
-    {
-      name: "PM eCollection",
-      url: "https://pmecollection.com.au",
-      logo: "assets/images/app_logos/pmbooks.png",
-      description: "Digital PM readers.",
-      tags: ["Staff", "Student"],
-      loginType: "other"
-    },
-    {
-      name: "SunShine Online",
-      url: "https://www.sunshineonline.com.au",
-      logo: "assets/images/app_logos/sunshine.png",
-      description: "Literacy and numeracy.",
-      tags: ["Staff", "Student"],
-      loginType: "other"
-    },
-    {
-      name: "Essential Assessment",
-      url: "https://www.essentialassessment.com.au",
-      logo: "assets/images/app_logos/essentialassessment.png",
-      description: "Online assessments.",
-      tags: ["Staff", "Student"],
-      loginType: "other"
-    },
-    {
-      name: "ACER Testing",
-      url: "https://oars.acer.edu.au",
-      logo: "assets/images/app_logos/acer.png",
-      description: "Online testing system.",
-      tags: ["Staff", "Student"],
-      loginType: "other"
-    },
-    {
-      name: "Tinkercad",
-      url: "https://www.tinkercad.com",
-      logo: "assets/images/app_logos/tinkercad.png",
-      description: "3D design and coding tool.",
-      tags: ["Student"],
-      loginType: "school"
-    },
-    {
-      name: "Code.org",
-      url: "https://code.org",
-      logo: "assets/images/app_logos/codeorg.png",
-      description: "Learn coding basics.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "micro:bit",
-      url: "https://microbit.org",
-      logo: "assets/images/app_logos/microbit.png",
-      description: "Program tiny devices.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "Scratch",
-      url: "https://scratch.mit.edu",
-      logo: "assets/images/app_logos/scratch.png",
-      description: "Create interactive projects.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "Prodigy",
-      url: "https://www.prodigygame.com",
-      logo: "assets/images/app_logos/prodigy.png",
-      description: "Math game adventure.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "School Survey",
-      url: "#",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Survey",
-      description: "Give feedback on learning.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "eSmart Digital License",
-      url: "#",
-      logo: "assets/images/app_logos/esmart.png",
-      description: "Learn about online safety.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "Pivot Wellbeing Survey",
-      url: "#",
-      logo: "assets/images/app_logos/pivot.png",
-      description: "Student wellbeing feedback.",
-      tags: ["Student"],
-      loginType: "other"
-    },
-    {
-      name: "JAMF Cloud",
-      url: "https://wallaranops.jamfcloud.com/",
-      logo: "assets/images/app_logos/jamf.png",
-      description: "Device management.",
-      tags: ["Admin"],
-      loginType: "school"
-    },
-    {
-      name: "Google Workspace Admin Console",
-      url: "https://admin.google.com/",
-      logo: "assets/images/app_logos/google.png",
-      description: "Administer Google accounts.",
-      tags: ["Admin"],
-      loginType: "school"
-    },
-    {
-      name: "PaperCut",
-      url: "http://5055prs01:9191/admin",
-      logo: "assets/images/app_logos/papercut.png",
-      description: "Admin printing dashboard.",
-      tags: ["Admin"],
-      loginType: "school"
-    },
-    {
-      name: "IT Asset Management",
-      url: "http://itassets.wallarano-ps.vic.edu.au/",
-      logo: "assets/images/app_logos/itassets.png",
-      description: "Track school IT equipment.",
-      tags: ["Admin"],
-      loginType: "school"
-    },
-    {
-      name: "Zabbix",
-      url: "http://status.wallarano-ps.vic.edu.au/zabbix/",
-      logo: "assets/images/app_logos/zabbix.png",
-      description: "Network status and dashboard.",
-      tags: ["Admin"],
-      loginType: "other"
-    },
-    {
-      name: "Apple School Manager",
-      url: "https://school.apple.com/",
-      logo: "assets/images/app_logos/asm.png",
-      description: "Manage Apple devices.",
-      tags: ["Admin"],
-      loginType: "other"
-    },
-    {
-      name: "PFSense",
-      url: "https://10.131.240.62/",
-      logo: "assets/images/app_logos/pfsense.png",
-      description: "Manage firewall & routing.",
-      tags: ["Admin"],
-      loginType: "other"
-    },
-    {
-      name: "TechAssist",
-      url: "http://techassist.wallarano-ps.vic.edu.au/",
-      logo: "assets/images/app_logos/wallarano.png",
-      description: "IT support tools.",
-      tags: ["Admin"],
-      loginType: "school"
-    },
-    {
-      name: "eduPass Admin Portal",
-      url: "https://edupassadminportal.education.vic.gov.au/IdentityManagement/default.aspx",
-      logo: "assets/images/app_logos/edupass.png",
-      description: "Manage staff and student eduPass accounts.",
-      tags: ["Admin"],
-      loginType: "edupass"
-    },
-    {
-      name: "eduSTAR MC",
-      url: "https://apps.edustar.vic.edu.au/edustarmc/",
-      logo: "assets/images/app_logos/edustar.png",
-      description: "eduSTAR Management Centre.",
-      tags: ["Admin"],
-      loginType: "edupass"
-    },
-    {
-      name: "WeKan",
-      url: "http://10.131.240.77/b/R5Wn9DPqCtcYN6cKb/ict-support-team",
-      logo: "assets/images/app_logos/wekan.png",
-      description: "Project/task boards for admin.",
-      tags: ["Admin"],
-      loginType: "other"
-    }
-  ];
-  
+  {
+    name: "App One",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/607d8b/ffffff&text=App+1",
+    description: "Description for App One.",
+    tags: ["Staff", "Admin"],
+    loginType: "edupass"
+  },
+  {
+    name: "App Two",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/8bc34a/ffffff&text=App+2",
+    description: "Description for App Two.",
+    tags: ["Staff"],
+    loginType: "edupass"
+  },
+  {
+    name: "Learning Hub",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/ff9800/ffffff&text=Learn",
+    description: "Access learning content and tools.",
+    tags: ["Staff", "Student"],
+    loginType: "school"
+  },
+  {
+    name: "Email Portal",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/3f51b5/ffffff&text=Email",
+    description: "Check your email messages.",
+    tags: ["Staff", "Student"],
+    loginType: "school"
+  },
+  {
+    name: "File Drive",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/009688/ffffff&text=Drive",
+    description: "Store and manage your files online.",
+    tags: ["Staff", "Student", "Admin"],
+    loginType: "school"
+  },
+  {
+    name: "Survey Tool",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/e91e63/ffffff&text=Survey",
+    description: "Submit your feedback and opinions.",
+    tags: ["Student"],
+    loginType: "other"
+  },
+  {
+    name: "Video Meeting",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/9c27b0/ffffff&text=Meet",
+    description: "Join and host video calls.",
+    tags: ["Staff"],
+    loginType: "school"
+  },
+  {
+    name: "Admin Console",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/795548/ffffff&text=Admin",
+    description: "Manage admin settings and users.",
+    tags: ["Admin"],
+    loginType: "school"
+  },
+  {
+    name: "Digital Notebook",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/00bcd4/ffffff&text=Notes",
+    description: "Take and organize digital notes.",
+    tags: ["Staff", "Student"],
+    loginType: "school"
+  },
+  {
+    name: "Task Board",
+    url: "#",
+    logo: "https://dummyimage.com/100x100/cddc39/000000&text=Tasks",
+    description: "Plan and manage your projects.",
+    tags: ["Admin"],
+    loginType: "other"
+  }
+];
