@@ -161,7 +161,7 @@ const apps = [
     },
     {
       name: "Essential Assessment",
-      url: "https://www.essentialassessment.com.au/student/",
+      url: "https://app.essentialassessment.com.au/student/",
       logo: "assets/images/app_logos/essentialassessment.png",
       description: "Student login page.",
       tags: ["Staff", "Student"],
