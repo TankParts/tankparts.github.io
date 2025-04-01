@@ -124,11 +124,11 @@ function renderApps(appList) {
 
   if (appList.length === 0) {
     container.innerHTML = `
-    <div style="text-align:center; padding: 2rem;">
-      <div class="speech-bubble">We couldn’t find any apps that match your search — try searching for something else!</div>
-      <img src="assets/images/no-results.png" alt="No matching apps" style="width: 250px; height: auto; margin-top: 2rem;" />
-    </div>
-  `;  
+      <div style="text-align:center; padding: 2rem;">
+        <p style="font-size: 1.1rem; color: #444;">“We couldn’t find any apps that match your search — try searching for something else!”</p>
+        <img src="assets/images/no-results.png" alt="No matching apps" style="width: 250px; height: auto; margin-bottom: 1rem;" />
+      </div>
+    `;
     return;
   }
 
