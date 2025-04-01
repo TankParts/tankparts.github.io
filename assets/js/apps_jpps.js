@@ -32,6 +32,14 @@ const apps = [
       loginType: "none"
     },
     {
+      name: "DE Services Portal",
+      url: "https://services.educationapps.vic.gov.au/",
+      logo: "assets/images/app_logos/servicenow.png",
+      description: "Department of Education services portal.",
+      tags: ["Staff"],
+      loginType: "edupass"
+    },
+    {
       name: "Clickview",
       url: "https://clickview.com.au",
       logo: "assets/images/app_logos/clickview.png",
@@ -42,7 +50,7 @@ const apps = [
     {
       name: "Jells Park Primary School",
       url: "https://www.jpps.vic.edu.au/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=JPPS",
+      logo: "assets/images/app_logos/jpps.png",
       description: "Access the school website.",
       tags: ["Staff", "Student"],
       loginType: "none"
@@ -50,8 +58,8 @@ const apps = [
     {
       name: "IT Support Help Desk",
       url: "https://jellsparkps.sentral.com.au/taskpad/tasks/itsupport/add",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=IT Support",
-      description: "Request assistance with your computer",
+      logo: "assets/images/app_logos/sentral.png",
+      description: "Create a new IT support request.",
       tags: ["Staff"],
       loginType: "edupass"
     },
