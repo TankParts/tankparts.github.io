@@ -2,7 +2,7 @@ const apps = [
     {
       name: "Sentral",
       url: "https://wallaranops.sentral.com.au/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Sentral",
+      logo: "images/app/sentral.png",
       description: "School management system.",
       tags: ["Staff", "Admin"],
       loginType: "edupass"
@@ -10,7 +10,7 @@ const apps = [
     {
       name: "Education Mail",
       url: "#",
-      logo: "https://dummyimage.com/150x150/0288D1/fff&text=Mail",
+      logo: "images/app/edumail.png",
       description: "Department email access.",
       tags: ["Staff"],
       loginType: "edupass"
@@ -18,7 +18,7 @@ const apps = [
     {
       name: "eduPay",
       url: "#",
-      logo: "https://dummyimage.com/150x150/4CAF50/fff&text=eduPay",
+      logo: "images/app/edupay.png",
       description: "Staff payroll and HR system.",
       tags: ["Staff"],
       loginType: "edupass"
@@ -26,7 +26,7 @@ const apps = [
     {
       name: "School Website",
       url: "#",
-      logo: "https://dummyimage.com/150x150/455A64/fff&text=Website",
+      logo: "images/app/wallarano.png",
       description: "Access the school website.",
       tags: ["Staff", "Student"],
       loginType: "none"
@@ -34,7 +34,7 @@ const apps = [
     {
       name: "Google Drive",
       url: "https://drive.google.com/",
-      logo: "https://dummyimage.com/150x150/4285F4/fff&text=Drive",
+      logo: "images/app/drive.png",
       description: "Cloud storage by Google.",
       tags: ["Staff", "Student", "Admin"],
       loginType: "school"
@@ -42,7 +42,7 @@ const apps = [
     {
       name: "Google Mail",
       url: "https://mail.google.com",
-      logo: "https://dummyimage.com/150x150/EA4335/fff&text=Gmail",
+      logo: "images/app/gmail.png",
       description: "Email by Google.",
       tags: ["Staff", "Student"],
       loginType: "school"
@@ -50,7 +50,7 @@ const apps = [
     {
       name: "Google Classroom",
       url: "https://classroom.google.com",
-      logo: "https://dummyimage.com/150x150/34A853/fff&text=Classroom",
+      logo: "images/app/classroom.png",
       description: "Manage classrooms online.",
       tags: ["Staff", "Student"],
       loginType: "school"
@@ -58,7 +58,7 @@ const apps = [
     {
       name: "Google Calendar",
       url: "https://calendar.google.com",
-      logo: "https://dummyimage.com/150x150/FFA000/fff&text=Calendar",
+      logo: "images/app/calendar.png",
       description: "Calendar and scheduling.",
       tags: ["Staff"],
       loginType: "school"
@@ -66,7 +66,7 @@ const apps = [
     {
       name: "Google Meet",
       url: "https://meet.google.com",
-      logo: "https://dummyimage.com/150x150/FBBC05/fff&text=Meet",
+      logo: "images/app/meet.png",
       description: "Video conferencing.",
       tags: ["Staff"],
       loginType: "school"
@@ -74,7 +74,7 @@ const apps = [
     {
       name: "Google Docs",
       url: "https://docs.google.com",
-      logo: "https://dummyimage.com/150x150/4285F4/fff&text=Docs",
+      logo: "images/app/gdocs.png",
       description: "Word processing.",
       tags: ["Staff", "Student"],
       loginType: "school"
@@ -82,7 +82,7 @@ const apps = [
     {
       name: "Google Slides",
       url: "https://slides.google.com",
-      logo: "https://dummyimage.com/150x150/EA4335/fff&text=Slides",
+      logo: "images/app/gslides.png",
       description: "Presentation tool.",
       tags: ["Staff", "Student"],
       loginType: "school"
@@ -90,7 +90,7 @@ const apps = [
     {
       name: "Google Sheets",
       url: "https://sheets.google.com",
-      logo: "https://dummyimage.com/150x150/34A853/fff&text=Sheets",
+      logo: "images/app/sheets.png",
       description: "Spreadsheets by Google.",
       tags: ["Staff", "Student"],
       loginType: "school"
@@ -98,7 +98,7 @@ const apps = [
     {
       name: "Google Forms",
       url: "https://forms.google.com",
-      logo: "https://dummyimage.com/150x150/FBBC05/fff&text=Forms",
+      logo: "images/app/forms.png",
       description: "Create forms and quizzes.",
       tags: ["Staff", "Student"],
       loginType: "school"
@@ -106,7 +106,7 @@ const apps = [
     {
       name: "Clickview",
       url: "https://clickview.com.au",
-      logo: "https://dummyimage.com/150x150/FF6F00/fff&text=Clickview",
+      logo: "images/app/clickview.png",
       description: "Educational video platform.",
       tags: ["Staff", "Student"],
       loginType: "school"
@@ -114,7 +114,7 @@ const apps = [
     {
       name: "Epic!",
       url: "https://www.getepic.com",
-      logo: "https://dummyimage.com/150x150/FF9800/fff&text=Epic",
+      logo: "images/app/epic.png",
       description: "Digital reading library.",
       tags: ["Staff", "Student"],
       loginType: "other"
@@ -122,7 +122,7 @@ const apps = [
     {
       name: "Quick Links",
       url: "#",
-      logo: "https://dummyimage.com/150x150/9E9E9E/fff&text=Links",
+      logo: "images/app/quicklinks.png",
       description: "Access useful links.",
       tags: ["Staff", "Student"],
       loginType: "none"
@@ -130,7 +130,7 @@ const apps = [
     {
       name: "SeeSaw",
       url: "https://web.seesaw.me",
-      logo: "https://dummyimage.com/150x150/FF4081/fff&text=SeeSaw",
+      logo: "images/app/seesaw.png",
       description: "Digital portfolios.",
       tags: ["Staff", "Student"],
       loginType: "other"
@@ -138,7 +138,7 @@ const apps = [
     {
       name: "PM eCollection",
       url: "https://pmecollection.com.au",
-      logo: "https://dummyimage.com/150x150/673AB7/fff&text=PM+eBooks",
+      logo: "images/app/pmbooks.png",
       description: "Digital PM readers.",
       tags: ["Staff", "Student"],
       loginType: "other"
@@ -146,7 +146,7 @@ const apps = [
     {
       name: "SunShine Online",
       url: "https://www.sunshineonline.com.au",
-      logo: "https://dummyimage.com/150x150/FFC107/fff&text=Sunshine",
+      logo: "images/app/sunshine.png",
       description: "Literacy and numeracy.",
       tags: ["Staff", "Student"],
       loginType: "other"
@@ -154,7 +154,7 @@ const apps = [
     {
       name: "Essential Assessment",
       url: "https://www.essentialassessment.com.au",
-      logo: "https://dummyimage.com/150x150/4CAF50/fff&text=Essential",
+      logo: "images/app/essentialassessment.png",
       description: "Online assessments.",
       tags: ["Staff", "Student"],
       loginType: "other"
@@ -162,7 +162,7 @@ const apps = [
     {
       name: "ACER Testing",
       url: "https://oars.acer.edu.au",
-      logo: "https://dummyimage.com/150x150/9C27B0/fff&text=ACER",
+      logo: "images/app/acer.png",
       description: "Online testing system.",
       tags: ["Staff", "Student"],
       loginType: "other"
@@ -170,7 +170,7 @@ const apps = [
     {
       name: "Tinkercad",
       url: "https://www.tinkercad.com",
-      logo: "https://dummyimage.com/150x150/0D47A1/fff&text=Tinkercad",
+      logo: "images/app/tinkercad.png",
       description: "3D design and coding tool.",
       tags: ["Student"],
       loginType: "school"
@@ -178,7 +178,7 @@ const apps = [
     {
       name: "Code.org",
       url: "https://code.org",
-      logo: "https://dummyimage.com/150x150/3F51B5/fff&text=Code.org",
+      logo: "images/app/codeorg.png",
       description: "Learn coding basics.",
       tags: ["Student"],
       loginType: "other"
@@ -186,7 +186,7 @@ const apps = [
     {
       name: "micro:bit",
       url: "https://microbit.org",
-      logo: "https://dummyimage.com/150x150/009688/fff&text=micro:bit",
+      logo: "images/app/microbit.png",
       description: "Program tiny devices.",
       tags: ["Student"],
       loginType: "other"
@@ -194,7 +194,7 @@ const apps = [
     {
       name: "Scratch",
       url: "https://scratch.mit.edu",
-      logo: "https://dummyimage.com/150x150/F44336/fff&text=Scratch",
+      logo: "images/app/scratch.png",
       description: "Create interactive projects.",
       tags: ["Student"],
       loginType: "other"
@@ -202,7 +202,7 @@ const apps = [
     {
       name: "Prodigy",
       url: "https://www.prodigygame.com",
-      logo: "https://dummyimage.com/150x150/8BC34A/fff&text=Prodigy",
+      logo: "images/app/prodigy.png",
       description: "Math game adventure.",
       tags: ["Student"],
       loginType: "other"
@@ -218,7 +218,7 @@ const apps = [
     {
       name: "eSmart Digital License",
       url: "#",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eSmart",
+      logo: "images/app/esmart.png",
       description: "Learn about online safety.",
       tags: ["Student"],
       loginType: "other"
@@ -226,7 +226,7 @@ const apps = [
     {
       name: "Pivot Wellbeing Survey",
       url: "#",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Pivot",
+      logo: "images/app/pivot.png",
       description: "Student wellbeing feedback.",
       tags: ["Student"],
       loginType: "other"
@@ -234,7 +234,7 @@ const apps = [
     {
       name: "JAMF Cloud",
       url: "https://wallaranops.jamfcloud.com/",
-      logo: "https://dummyimage.com/150x150/455A64/fff&text=JAMF",
+      logo: "images/app/jamf.png",
       description: "Device management.",
       tags: ["Admin"],
       loginType: "school"
@@ -242,7 +242,7 @@ const apps = [
     {
       name: "Google Workspace Admin Console",
       url: "https://admin.google.com/",
-      logo: "https://dummyimage.com/150x150/546E7A/fff&text=GSuite",
+      logo: "images/app/google.png",
       description: "Administer Google accounts.",
       tags: ["Admin"],
       loginType: "school"
@@ -250,7 +250,7 @@ const apps = [
     {
       name: "PaperCut",
       url: "http://5055prs01:9191/admin",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Print",
+      logo: "images/app/papercut.png",
       description: "Admin printing dashboard.",
       tags: ["Admin"],
       loginType: "school"
@@ -258,7 +258,7 @@ const apps = [
     {
       name: "IT Asset Management",
       url: "http://itassets.wallarano-ps.vic.edu.au/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Assets",
+      logo: "images/app/itassets.png",
       description: "Track school IT equipment.",
       tags: ["Admin"],
       loginType: "school"
@@ -266,7 +266,7 @@ const apps = [
     {
       name: "Zabbix",
       url: "http://status.wallarano-ps.vic.edu.au/zabbix/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Status",
+      logo: "images/app/zabbix.png",
       description: "Network status and dashboard.",
       tags: ["Admin"],
       loginType: "other"
@@ -274,7 +274,7 @@ const apps = [
     {
       name: "Apple School Manager",
       url: "https://school.apple.com/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=ASM",
+      logo: "images/app/asm.png",
       description: "Manage Apple devices.",
       tags: ["Admin"],
       loginType: "other"
@@ -282,7 +282,7 @@ const apps = [
     {
       name: "PFSense",
       url: "https://10.131.240.62/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Firewall",
+      logo: "images/app/pfsense.png",
       description: "Manage firewall & routing.",
       tags: ["Admin"],
       loginType: "other"
@@ -290,7 +290,7 @@ const apps = [
     {
       name: "TechAssist",
       url: "http://techassist.wallarano-ps.vic.edu.au/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Tech",
+      logo: "images/app/wallarano.png",
       description: "IT support tools.",
       tags: ["Admin"],
       loginType: "school"
@@ -298,7 +298,7 @@ const apps = [
     {
       name: "eduPass Admin Portal",
       url: "https://edupassadminportal.education.vic.gov.au/IdentityManagement/default.aspx",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduPass",
+      logo: "images/app/edupass.png",
       description: "Manage staff and student eduPass accounts.",
       tags: ["Admin"],
       loginType: "edupass"
@@ -306,7 +306,7 @@ const apps = [
     {
       name: "eduSTAR Management Centre",
       url: "https://apps.edustar.vic.edu.au/edustarmc/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduSTAR.MC",
+      logo: "images/app/edustar.png",
       description: "School Technology Management Centre.",
       tags: ["Admin"],
       loginType: "edupass"
@@ -314,7 +314,7 @@ const apps = [
     {
       name: "WeKan",
       url: "http://10.131.240.77/b/R5Wn9DPqCtcYN6cKb/ict-support-team",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=WeKan",
+      logo: "images/app/wekan.png",
       description: "Project/task boards for admin.",
       tags: ["Admin"],
       loginType: "other"
