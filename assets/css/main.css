@@ -319,19 +319,28 @@ main {
   font-family: "Segoe UI", "Rubik", sans-serif;
 }
 
-/* 👇 NEW: Curved Tail */
-.speech-tail {
+.speech-bubble::after {
+  content: "";
   position: absolute;
-  bottom: -14px;
+  bottom: -18px;
   left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 20px;
-  height: 20px;
-  background: white;
-  border: 2px solid black;
-  border-top: none;
-  border-left: none;
-  box-shadow: -2px 2px 0 black;
-  border-radius: 0 0 6px 0;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
   z-index: 0;
 }
+
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 9px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  z-index: 1;
+}
+
+
