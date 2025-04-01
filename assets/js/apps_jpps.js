@@ -42,7 +42,7 @@ const apps = [
     {
       name: "Arc",
       url: "https://arc.educationapps.vic.gov.au/",
-      logo: "assets/images/app_logos/edumail.png",
+      logo: "assets/images/app_logos/arc.png",
       description: "Resources, professional learning, events and software.",
       tags: ["Staff"],
       loginType: "edupass"
