@@ -289,3 +289,7 @@ main {
   opacity: 0.4;
   filter: grayscale(80%);
 }
+
+#admin-only-controls {
+  display: none;
+}

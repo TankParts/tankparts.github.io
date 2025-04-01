@@ -31,13 +31,16 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   checkboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", filterApps);
+    checkbox.addEventListener("change", () => {
+      filterApps();
+      toggleAdminControlsVisibility();
+    });
   });
-
+  
   // Render apps and apply visibility
   filterApps();
   toggleRoleTags(!showRoleTags); // Role tags are hidden by default (unchecked = hidden)
-  toggleLoginTags(hideLoginTags);
+  toggleLoginTags(!showLoginTags);
 });
 
 function toggleRoleTags(hide) {
@@ -82,7 +85,16 @@ function setSearchFilter(searchParam) {
 
 const container = document.getElementById("app-container");
 const searchInput = document.getElementById("searchInput");
-const checkboxes = document.querySelectorAll(".tag-checkbox");
+const adminOnlyControls = document.getElementById("admin-only-controls");
+const adminCheckbox = Array.from(checkboxes).find(cb => cb.value === "Admin");
+
+function toggleAdminControlsVisibility() {
+  adminOnlyControls.style.display = adminCheckbox.checked ? "block" : "none";
+}
+
+// Initial check on page load
+toggleAdminControlsVisibility();
+
 const selectAllBtn = document.getElementById("selectAll");
 const clearAllBtn = document.getElementById("clearAll");
 const autocompleteList = document.getElementById("autocomplete-list");
