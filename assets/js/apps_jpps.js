@@ -27,7 +27,7 @@ const apps = [
       name: "Department of Education",
       url: "https://www.vic.gov.au/education/",
       logo: "assets/images/app_logos/edumail.png",
-      description: "Find government information about early childhood, primary and secondary school, and further education.",
+      description: "Government education resources and info.",
       tags: ["Staff"],
       loginType: "none"
     },
