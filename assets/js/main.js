@@ -125,7 +125,7 @@ function renderApps(appList) {
   if (appList.length === 0) {
     container.innerHTML = `
       <div style="text-align:center; padding: 2rem;">
-        <img src="assets/assets/images/no-results.png" alt="No matching apps" style="width: 180px; height: auto; margin-bottom: 1rem;" />
+        <img src="assets/images/no-results.png" alt="No matching apps" style="width: 180px; height: auto; margin-bottom: 1rem;" />
         <p style="font-size: 1.1rem; color: #444;">No apps match your search.</p>
       </div>
     `;
