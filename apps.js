@@ -306,7 +306,7 @@ const apps = [
     {
       name: "eduSTAR Management Centre",
       url: "https://apps.edustar.vic.edu.au/edustarmc/",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduSTAR",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduSTAR.MC",
       description: "School Technology Management Centre.",
       tags: ["Admin"],
       loginType: "edupass"
