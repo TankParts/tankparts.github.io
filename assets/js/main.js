@@ -126,7 +126,7 @@ function renderApps(appList) {
     container.innerHTML = `
       <div style="text-align:center; padding: 2rem;">
         <img src="assets/images/no-results.png" alt="No matching apps" style="width: 180px; height: auto; margin-bottom: 1rem;" />
-        <p style="font-size: 1.1rem; color: #444;">“We couldn’t find any apps that match — try searching something else!”</p>
+        <p style="font-size: 1.1rem; color: #444;">“We couldn’t find any apps that match — try searching for something else!”</p>
       </div>
     `;
     return;
