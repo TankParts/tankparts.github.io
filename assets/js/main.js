@@ -108,7 +108,7 @@ function getTooltipText(app) {
   switch (app.loginType) {
     case "edupass": return `${appNameBold} uses your <strong>eduPass account</strong> to log in.`;
     case "school": return `${appNameBold} uses your <strong>school account</strong> to log in.`;
-    case "other": return `${appNameBold} uses the account provided by your teacher.`;
+    case "other": return `${appNameBold} uses the account provided by your teacher to log in.`;
     case "none": return `${appNameBold} doesn’t need a login.`;
     default: return `We're not sure how to log in to ${appNameBold} — ask your teacher.`;
   }
