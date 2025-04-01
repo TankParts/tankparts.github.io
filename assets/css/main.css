@@ -307,35 +307,41 @@ main {
 
 .speech-bubble {
   position: relative;
-  background: #fff;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  max-width: 450px;
+  background: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  max-width: 500px;
   font-size: 1rem;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-  z-index: 10;
+  line-height: 1.4;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .speech-bubble::after {
   content: "";
   position: absolute;
-  bottom: -16px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  border-width: 8px;
+  border-width: 10px;
   border-style: solid;
-  border-color: #000 transparent transparent transparent;
+  border-color: black transparent transparent transparent;
 }
 
 .speech-bubble::before {
   content: "";
   position: absolute;
-  bottom: -14px;
+  bottom: -18px;
   left: 50%;
   transform: translateX(-50%);
-  border-width: 7px;
+  border-width: 9px;
   border-style: solid;
-  border-color: #fff transparent transparent transparent;
+  border-color: white transparent transparent transparent;
+}
+
+.speech-bubble:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
