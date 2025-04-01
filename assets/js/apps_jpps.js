@@ -35,9 +35,17 @@ const apps = [
       name: "Policy and Advisory Library",
       url: "https://www2.education.vic.gov.au/pal",
       logo: "assets/images/app_logos/edumail.png",
-      description: "Find operational policies and guidance for schools",
+      description: "Find operational policies and guidance for schools.",
       tags: ["Staff"],
-      loginType: "none"
+      loginType: "edupass"
+    },
+    {
+      name: "Arc",
+      url: "https://arc.educationapps.vic.gov.au/",
+      logo: "assets/images/app_logos/edumail.png",
+      description: "Resources, professional learning, events and software.",
+      tags: ["Staff"],
+      loginType: "edupass"
     },
     {
       name: "DE Services Portal",
