@@ -16,6 +16,14 @@ const apps = [
       loginType: "edupass"
     },
     {
+      name: "CASES21",
+      url: "https://rcases.eduweb.vic.gov.au/RDWeb/Pages/en-US/login.aspx",
+      logo: "assets/images/app_logos/cases21.png",
+      description: "School administration and finance system.",
+      tags: ["Staff"],
+      loginType: "edupass"
+    },
+    {
       name: "eduPay",
       url: "#",
       logo: "assets/images/app_logos/edupay.png",
