@@ -24,7 +24,7 @@ const apps = [
       loginType: "edupass"
     },
     {
-      name: "School Website",
+      name: "Wallarano Primary School",
       url: "#",
       logo: "images/app/wallarano.png",
       description: "Access the school website.",
