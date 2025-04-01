@@ -290,47 +290,42 @@ main {
   filter: grayscale(80%);
 }
 
-.speech-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
 .speech-bubble {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   background: #fff;
   border: 2px solid #000;
   color: #000;
   padding: 1rem 1.5rem;
   border-radius: 12px;
   font-size: 1rem;
+  display: inline-block;
   max-width: 400px;
-  text-align: center;
-  z-index: 1;
+  margin: 0 auto;
 }
 
 .speech-bubble::after {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: #000 transparent transparent transparent;
+  bottom: -20px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #000;
+  border-bottom: 0;
+  margin-left: -10px;
 }
 
 .speech-bubble::before {
   content: "";
   position: absolute;
-  top: calc(100% - 2px);
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: #fff transparent transparent transparent;
-  z-index: 2;
+  bottom: -18px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #fff;
+  border-bottom: 0;
+  margin-left: -10px;
+  z-index: 1;
 }
-
