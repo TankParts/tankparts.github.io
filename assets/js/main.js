@@ -127,6 +127,7 @@ function renderApps(appList) {
       <div class="no-results-wrapper">
         <div class="speech-bubble">
           We couldn’t find any apps that match your search — try searching for something else!
+          <div class="speech-tail"></div>
         </div>
         <img src="assets/images/no-results.png" alt="No matching apps" class="no-results-img" />
       </div>
