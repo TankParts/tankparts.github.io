@@ -1,7 +1,7 @@
 const apps = [
     {
       name: "Sentral",
-      url: "#",
+      url: "https://wallaranops.sentral.com.au/",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Sentral",
       description: "School management system.",
       tags: ["Staff", "Admin"],
@@ -33,7 +33,7 @@ const apps = [
     },
     {
       name: "Google Drive",
-      url: "https://drive.google.com",
+      url: "https://drive.google.com/",
       logo: "https://dummyimage.com/150x150/4285F4/fff&text=Drive",
       description: "Cloud storage by Google.",
       tags: ["Staff", "Student", "Admin"],
@@ -233,15 +233,15 @@ const apps = [
     },
     {
       name: "JAMF Cloud",
-      url: "#",
+      url: "https://wallaranops.jamfcloud.com/",
       logo: "https://dummyimage.com/150x150/455A64/fff&text=JAMF",
       description: "Device management.",
       tags: ["Admin"],
       loginType: "school"
     },
     {
-      name: "GSuite Admin",
-      url: "#",
+      name: "Google Workspace Admin Console",
+      url: "https://admin.google.com/",
       logo: "https://dummyimage.com/150x150/546E7A/fff&text=GSuite",
       description: "Administer Google accounts.",
       tags: ["Admin"],
@@ -249,7 +249,7 @@ const apps = [
     },
     {
       name: "PaperCut",
-      url: "#",
+      url: "http://5055prs01:9191/admin",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Print",
       description: "Admin printing dashboard.",
       tags: ["Admin"],
@@ -257,23 +257,23 @@ const apps = [
     },
     {
       name: "IT Asset Management",
-      url: "#",
+      url: "http://itassets.wallarano-ps.vic.edu.au/",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Assets",
       description: "Track school IT equipment.",
       tags: ["Admin"],
       loginType: "school"
     },
     {
-      name: "Network Status",
-      url: "#",
+      name: "Zabbix",
+      url: "http://status.wallarano-ps.vic.edu.au/zabbix/",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Status",
-      description: "Check internet/network status.",
+      description: "Network status and dashboard.",
       tags: ["Admin"],
       loginType: "other"
     },
     {
       name: "Apple School Manager",
-      url: "#",
+      url: "https://school.apple.com/",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=ASM",
       description: "Manage Apple devices.",
       tags: ["Admin"],
@@ -281,7 +281,7 @@ const apps = [
     },
     {
       name: "PFSense",
-      url: "#",
+      url: "https://10.131.240.62/",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Firewall",
       description: "Manage firewall & routing.",
       tags: ["Admin"],
@@ -289,31 +289,31 @@ const apps = [
     },
     {
       name: "TechAssist",
-      url: "#",
+      url: "http://techassist.wallarano-ps.vic.edu.au/",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Tech",
       description: "IT support tools.",
       tags: ["Admin"],
       loginType: "school"
     },
     {
-      name: "eduProxy",
-      url: "#",
-      logo: "https://dummyimage.com/150x150/607D8B/fff&text=Proxy",
-      description: "Manage proxy and filters.",
+      name: "eduPass Admin Portal",
+      url: "https://edupassadminportal.education.vic.gov.au/IdentityManagement/default.aspx",
+      logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduPass",
+      description: "Manage staff and student eduPass accounts.",
       tags: ["Admin"],
       loginType: "edupass"
     },
     {
-      name: "eduSTAR.MC",
-      url: "#",
+      name: "eduSTAR Management Centre",
+      url: "https://apps.edustar.vic.edu.au/edustarmc/",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=eduSTAR",
-      description: "Manage eduSTAR deployments.",
+      description: "School Technology Management Centre.",
       tags: ["Admin"],
       loginType: "edupass"
     },
     {
       name: "WeKan",
-      url: "#",
+      url: "http://10.131.240.77/b/R5Wn9DPqCtcYN6cKb/ict-support-team",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=WeKan",
       description: "Project/task boards for admin.",
       tags: ["Admin"],
