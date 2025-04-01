@@ -340,3 +340,9 @@ main {
   border-color: #fff transparent transparent transparent;
   z-index: 2;
 }
+
+.no-results-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem 2rem;
+}
