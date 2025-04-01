@@ -31,13 +31,30 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   checkboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", filterApps);
+    checkbox.addEventListener("change", () => {
+      filterApps();
+      updateAdminVisibility();
+    });
   });
+
+  // Admin toggle visibility
+  const adminCheckbox = [...checkboxes].find(cb => cb.value === "Admin");
+  const adminToggles = document.getElementById("adminToggles");
+
+  function updateAdminVisibility() {
+    if (adminCheckbox.checked) {
+      adminToggles.style.display = "block";
+    } else {
+      adminToggles.style.display = "none";
+    }
+  }
+
+  updateAdminVisibility(); // Run on load
 
   // Render apps and apply visibility
   filterApps();
   toggleRoleTags(!showRoleTags); // Role tags are hidden by default (unchecked = hidden)
-  toggleLoginTags(hideLoginTags);
+  toggleLoginTags(!showLoginTags);
 });
 
 function toggleRoleTags(hide) {
@@ -167,10 +184,8 @@ function renderApps(appList) {
     link.appendChild(content);
 
     const badgeRow = document.createElement("div");
-    // Preserve role tag visibility across re-renders
     const showRolesChecked = document.getElementById("showRoleTags").checked;
     badgeRow.style.display = showRolesChecked ? "" : "none";
-
     badgeRow.className = "badge-row";
 
     const selectedTags = getSelectedTags();
@@ -189,8 +204,7 @@ function renderApps(appList) {
 
     const loginRow = document.createElement("div");
     const showLoginChecked = document.getElementById("showLoginTags").checked;
-    loginRow.style.display = showLoginChecked ? "" : "none";    
-
+    loginRow.style.display = showLoginChecked ? "" : "none";
     loginRow.className = "login-row";
 
     const loginContent = document.createElement("div");
@@ -328,12 +342,12 @@ document.addEventListener("click", (e) => {
 selectAllBtn.addEventListener("click", () => {
   checkboxes.forEach(cb => cb.checked = true);
   filterApps();
+  updateAdminVisibility();
 });
 
 clearAllBtn.addEventListener("click", () => {
   checkboxes.forEach(cb => cb.checked = false);
   searchInput.value = "";
   filterApps();
+  updateAdminVisibility();
 });
-
-// renderApps(apps);
