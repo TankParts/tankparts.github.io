@@ -13,21 +13,21 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   // Parse URL parameters
-  const { user, search, showRoleTags, hideLoginTags } = getURLParameters();
+  const { user, search, showRoleTags, showLoginTags } = getURLParameters();
   setUserFilters(user);
   setSearchFilter(search);
 
   // Apply initial states to checkboxes
   document.getElementById("showRoleTags").checked = showRoleTags;
-  document.getElementById("hideLoginTags").checked = hideLoginTags;
+  document.getElementById("showLoginTags").checked = showLoginTags;
 
   // Event listeners for manual changes
   document.getElementById("showRoleTags").addEventListener("change", e => {
     toggleRoleTags(!e.target.checked); // show when checked = true => !false = show
   });
 
-  document.getElementById("hideLoginTags").addEventListener("change", e => {
-    toggleLoginTags(e.target.checked);
+  document.getElementById("showLoginTags").addEventListener("change", e => {
+    toggleLoginTags(!e.target.checked);
   });
 
   checkboxes.forEach(checkbox => {
@@ -58,7 +58,7 @@ function getURLParameters() {
     user: params.get('user'),
     search: params.get('search'),
     showRoleTags: params.get('showRoleTags') === 'true',
-    hideLoginTags: params.get('hideLoginTags') === 'true'
+    showLoginTags: params.get('showLoginTags') === 'true'
   };
 }
 
@@ -188,8 +188,8 @@ function renderApps(appList) {
     });
 
     const loginRow = document.createElement("div");
-    const hideLoginChecked = document.getElementById("hideLoginTags").checked;
-    loginRow.style.display = hideLoginChecked ? "none" : "";
+    const showLoginChecked = document.getElementById("showLoginTags").checked;
+    loginRow.style.display = showLoginChecked ? "" : "none";    
 
     loginRow.className = "login-row";
 
