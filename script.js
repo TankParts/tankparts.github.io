@@ -18,12 +18,8 @@ window.addEventListener("DOMContentLoaded", () => {
   setSearchFilter(search);
 
   // Apply initial states to checkboxes
-  if (showRoleTags !== null) {
-    document.getElementById("showRoleTags").checked = showRoleTags;
-  }
-  if (showLoginTags !== null) {
-    document.getElementById("showLoginTags").checked = showLoginTags;
-  }
+  document.getElementById("showRoleTags").checked = showRoleTags;
+  document.getElementById("showLoginTags").checked = showLoginTags;
 
   // Event listeners for manual changes
   document.getElementById("showRoleTags").addEventListener("change", e => {
@@ -78,8 +74,8 @@ function getURLParameters() {
   return {
     user: params.get('user'),
     search: params.get('search'),
-    showRoleTags: params.has('showRoleTags') ? params.get('showRoleTags') === 'true' : null,
-    showLoginTags: params.has('showLoginTags') ? params.get('showLoginTags') === 'true' : null
+    showRoleTags: params.get('showRoleTags') === 'true',
+    showLoginTags: params.get('showLoginTags') === 'true'
   };
 }
 
