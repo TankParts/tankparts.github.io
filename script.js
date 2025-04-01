@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Render apps and apply visibility
   filterApps();
   toggleRoleTags(!showRoleTags); // Role tags are hidden by default (unchecked = hidden)
-  toggleLoginTags(hideLoginTags);
+  toggleLoginTags(!showLoginTags);
 });
 
 function toggleRoleTags(hide) {
