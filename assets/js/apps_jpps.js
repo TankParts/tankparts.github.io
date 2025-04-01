@@ -27,7 +27,15 @@ const apps = [
       name: "Department of Education",
       url: "https://www.vic.gov.au/education/",
       logo: "assets/images/app_logos/edumail.png",
-      description: "Government education resources and info.",
+      description: "Government education resources and information.",
+      tags: ["Staff"],
+      loginType: "none"
+    },
+    {
+      name: "Policy and Advisory Library",
+      url: "https://www2.education.vic.gov.au/pal",
+      logo: "assets/images/app_logos/edumail.png",
+      description: "Find operational policies and guidance for schools",
       tags: ["Staff"],
       loginType: "none"
     },
@@ -40,19 +48,11 @@ const apps = [
       loginType: "edupass"
     },
     {
-      name: "Clickview",
-      url: "https://clickview.com.au",
-      logo: "assets/images/app_logos/clickview.png",
-      description: "Educational video platform.",
-      tags: ["Staff", "Student"],
-      loginType: "edupass"
-    },
-    {
       name: "Jells Park Primary School",
       url: "https://www.jpps.vic.edu.au/",
       logo: "assets/images/app_logos/jpps.png",
       description: "Access the school website.",
-      tags: ["Staff", "Student"],
+      tags: ["Staff"],
       loginType: "none"
     },
     {
@@ -133,6 +133,14 @@ const apps = [
       logo: "assets/images/app_logos/meet.png",
       description: "Video conferencing.",
       tags: ["Staff"],
+      loginType: "edupass"
+    },
+    {
+      name: "Clickview",
+      url: "https://clickview.com.au",
+      logo: "assets/images/app_logos/clickview.png",
+      description: "Educational video platform.",
+      tags: ["Staff", "Student"],
       loginType: "edupass"
     },
     {
