@@ -8,10 +8,10 @@ const apps = [
       loginType: "edupass"
     },
     {
-      name: "Education Mail",
-      url: "#",
-      logo: "assets/images/app_logos/edumail.png",
-      description: "Department email access.",
+      name: "Outlook",
+      url: "https://outlook.com/owa/education.vic.gov.au",
+      logo: "assets/images/app_logos/microsoft-outlook.svg",
+      description: "Staff @education email account.",
       tags: ["Staff"],
       loginType: "edupass"
     },
@@ -25,7 +25,7 @@ const apps = [
     },
     {
       name: "eduPay",
-      url: "#",
+      url: "https://edupay.eduweb.vic.gov.au/",
       logo: "assets/images/app_logos/edupay.png",
       description: "Staff payroll and HR system.",
       tags: ["Staff"],
@@ -33,7 +33,7 @@ const apps = [
     },
     {
       name: "Wallarano Primary School",
-      url: "#",
+      url: "https://wallarano-ps.vic.edu.au/",
       logo: "assets/images/app_logos/wallarano.png",
       description: "Access the school website.",
       tags: ["Staff", "Student"],
@@ -51,7 +51,7 @@ const apps = [
       name: "Google Mail",
       url: "https://mail.google.com",
       logo: "assets/images/app_logos/gmail.png",
-      description: "Email by Google.",
+      description: "Student @schools email account.",
       tags: ["Staff", "Student"],
       loginType: "school"
     },
