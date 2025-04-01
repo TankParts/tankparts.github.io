@@ -10,8 +10,8 @@ const apps = [
     {
       name: "Outlook",
       url: "https://outlook.com/owa/education.vic.gov.au",
-      logo: "assets/images/app_logos/edumail.png",
-      description: "access your @education email account.",
+      logo: "assets/images/app_logos/microsoft-outlook.svg",
+      description: "Staff @education email account.",
       tags: ["Staff"],
       loginType: "edupass"
     },
@@ -75,7 +75,7 @@ const apps = [
       name: "Google Mail",
       url: "https://mail.google.com",
       logo: "assets/images/app_logos/gmail.png",
-      description: "Student email by Google.",
+      description: "Student @schools email account.",
       tags: ["Student"],
       loginType: "edupass"
     },
