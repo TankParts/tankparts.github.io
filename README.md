@@ -125,9 +125,11 @@ index.html?user=Student&search=drive&hideRoleTags=true
 
 ---
 
-## 📝 License
+## 📜 Licensing Notes
 
-This project is intended for internal educational use at your school. Not for commercial distribution.
+- All original **code** in this project is released under the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+- Some **images and logos** may be subject to third-party copyright or trademark restrictions.
+- These assets are included for educational/internal use only and **are not covered** by the open-source license.
 
 ---
 
