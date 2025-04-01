@@ -316,22 +316,18 @@ main {
   font-size: 1rem;
   line-height: 1.4;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  font-family: "Segoe UI", "Rubik", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .speech-bubble::after {
   content: "";
   position: absolute;
-  bottom: -16px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 32px;
-  height: 16px;
-  background: white;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  z-index: 1;
+  border-width: 10px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
 
 .speech-bubble::before {
