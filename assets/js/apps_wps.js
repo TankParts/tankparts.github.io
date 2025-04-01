@@ -51,7 +51,7 @@ const apps = [
       name: "Google Mail",
       url: "https://mail.google.com",
       logo: "assets/images/app_logos/gmail.png",
-      description: "Student @schools email account.",
+      description: "@wallarano-ps.vic.edu.au email account.",
       tags: ["Staff", "Student"],
       loginType: "school"
     },
