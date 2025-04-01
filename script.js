@@ -167,6 +167,10 @@ function renderApps(appList) {
     link.appendChild(content);
 
     const badgeRow = document.createElement("div");
+    // Preserve role tag visibility across re-renders
+    const showRolesChecked = document.getElementById("showRoleTags").checked;
+    badgeRow.style.display = showRolesChecked ? "" : "none";
+
     badgeRow.className = "badge-row";
 
     const selectedTags = getSelectedTags();
@@ -184,6 +188,9 @@ function renderApps(appList) {
     });
 
     const loginRow = document.createElement("div");
+    const hideLoginChecked = document.getElementById("hideLoginTags").checked;
+    loginRow.style.display = hideLoginChecked ? "none" : "";
+
     loginRow.className = "login-row";
 
     const loginContent = document.createElement("div");
@@ -329,4 +336,4 @@ clearAllBtn.addEventListener("click", () => {
   filterApps();
 });
 
-renderApps(apps);
+// renderApps(apps);
