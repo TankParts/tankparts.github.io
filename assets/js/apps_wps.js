@@ -161,9 +161,17 @@ const apps = [
     },
     {
       name: "Essential Assessment",
-      url: "https://www.essentialassessment.com.au",
+      url: "https://app.essentialassessment.com.au/login/",
       logo: "assets/images/app_logos/essentialassessment.png",
-      description: "Online assessments.",
+      description: "Educator login page.",
+      tags: ["Staff"],
+      loginType: "other"
+    },
+    {
+      name: "Essential Assessment",
+      url: "https://app.essentialassessment.com.au/student/",
+      logo: "assets/images/app_logos/essentialassessment.png",
+      description: "Student login page.",
       tags: ["Staff", "Student"],
       loginType: "other"
     },
@@ -177,11 +185,11 @@ const apps = [
     },
     {
       name: "Tinkercad",
-      url: "https://www.tinkercad.com",
+      url: "https://www.tinkercad.com/login",
       logo: "assets/images/app_logos/tinkercad.png",
       description: "3D design and coding tool.",
-      tags: ["Student"],
-      loginType: "school"
+      tags: ["Staff", "Student"],
+      loginType: "other"
     },
     {
       name: "Code.org",
@@ -217,7 +225,7 @@ const apps = [
     },
     {
       name: "School Survey",
-      url: "#",
+      url: "https://www.orima.com.au/atoss",
       logo: "https://dummyimage.com/150x150/607D8B/fff&text=Survey",
       description: "Give feedback on learning.",
       tags: ["Student"],
@@ -225,7 +233,7 @@ const apps = [
     },
     {
       name: "eSmart Digital License",
-      url: "#",
+      url: "https://digitallicence.com.au/accounts/login/",
       logo: "assets/images/app_logos/esmart.png",
       description: "Learn about online safety.",
       tags: ["Student"],
@@ -233,7 +241,7 @@ const apps = [
     },
     {
       name: "Pivot Wellbeing Survey",
-      url: "#",
+      url: "https://survey.pivotpl.com/login/wellbeing/FRXXJ",
       logo: "assets/images/app_logos/pivot.png",
       description: "Student wellbeing feedback.",
       tags: ["Student"],
