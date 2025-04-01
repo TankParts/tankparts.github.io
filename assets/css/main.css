@@ -293,7 +293,6 @@ main {
 .speech-wrapper {
   position: relative;
   display: inline-block;
-  margin-top: 3rem; /* pushes it down from the search bar */
 }
 
 .speech-bubble {
@@ -307,12 +306,9 @@ main {
   padding: 1rem 1.5rem;
   border-radius: 12px;
   font-size: 1rem;
-  width: 100%;
-  max-width: 480px; /* was 400px before — now wider */
+  max-width: 400px;
   text-align: center;
   z-index: 1;
-  box-sizing: border-box;
-  line-height: 1.4;
 }
 
 .speech-bubble::after {
@@ -337,3 +333,4 @@ main {
   border-color: #fff transparent transparent transparent;
   z-index: 2;
 }
+
