@@ -322,24 +322,25 @@ main {
 .speech-bubble::after {
   content: "";
   position: absolute;
-  bottom: -18px;
+  bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-  z-index: 0;
+  width: 32px;
+  height: 16px;
+  background: white;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  z-index: 1;
 }
 
 .speech-bubble::before {
   content: "";
   position: absolute;
-  bottom: -16px;
+  bottom: -18px;
   left: 50%;
   transform: translateX(-50%);
   border-width: 9px;
   border-style: solid;
   border-color: white transparent transparent transparent;
-  z-index: 1;
 }
-
