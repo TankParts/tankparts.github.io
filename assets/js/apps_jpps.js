@@ -153,18 +153,18 @@ const apps = [
     },
     {
       name: "PaperCut",
-      url: "http://papercut:9191/admin",
-      logo: "assets/images/app_logos/papercut.png",
-      description: "Admin printing dashboard. **double check the URL**",
-      tags: ["Admin"],
-      loginType: "school"
-    },
-    {
-      name: "PaperCut",
       url: "http://papercut:9191/user",
       logo: "assets/images/app_logos/papercut.png",
       description: "Check your papercut credit balance. **double check the URL**",
       tags: ["Staff", "Student"],
+      loginType: "school"
+    },
+    {
+      name: "PaperCut Admin Portal",
+      url: "http://papercut:9191/admin",
+      logo: "assets/images/app_logos/papercut.png",
+      description: "Admin printing dashboard. **double check the URL**",
+      tags: ["Admin"],
       loginType: "school"
     },
     {
