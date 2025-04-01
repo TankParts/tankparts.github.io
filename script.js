@@ -13,17 +13,17 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   // Parse URL parameters
-  const { user, search, showRoleTags, hideLoginTags } = getURLParameters();
+  const { user, search, hideRoleTags, hideLoginTags } = getURLParameters();
   setUserFilters(user);
   setSearchFilter(search);
 
   // Apply initial states to checkboxes
-  document.getElementById("showRoleTags").checked = showRoleTags;
+  document.getElementById("hideRoleTags").checked = hideRoleTags;
   document.getElementById("hideLoginTags").checked = hideLoginTags;
 
   // Event listeners for manual changes
-  document.getElementById("showRoleTags").addEventListener("change", e => {
-    toggleRoleTags(!e.target.checked); // show when checked = true => !false = show
+  document.getElementById("hideRoleTags").addEventListener("change", e => {
+    toggleRoleTags(e.target.checked);
   });
 
   document.getElementById("hideLoginTags").addEventListener("change", e => {
@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Render apps and apply visibility
   filterApps();
-  toggleRoleTags(!showRoleTags); // Role tags are hidden by default (unchecked = hidden)
+  toggleRoleTags(hideRoleTags);
   toggleLoginTags(hideLoginTags);
 });
 
@@ -57,7 +57,7 @@ function getURLParameters() {
   return {
     user: params.get('user'),
     search: params.get('search'),
-    showRoleTags: params.get('showRoleTags') === 'true',
+    hideRoleTags: params.get('hideRoleTags') === 'true',
     hideLoginTags: params.get('hideLoginTags') === 'true'
   };
 }
