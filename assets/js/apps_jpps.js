@@ -68,7 +68,7 @@ const apps = [
       url: "https://jellsparkps.sentral.com.au/taskpad/tasks/itsupport/add",
       logo: "assets/images/app_logos/sentral.png",
       description: "Create a new IT support request.",
-      tags: ["Staff"],
+      tags: ["Staff", "Admin"],
       loginType: "edupass"
     },
     {
@@ -80,6 +80,14 @@ const apps = [
       loginType: "edupass"
     },
     {
+      name: "Google Mail",
+      url: "https://mail.google.com",
+      logo: "assets/images/app_logos/gmail.png",
+      description: "Student @schools email account.",
+      tags: ["Student"],
+      loginType: "edupass"
+    },
+    {
       name: "Google Drive",
       url: "https://drive.google.com/",
       logo: "assets/images/app_logos/drive.png",
@@ -88,11 +96,11 @@ const apps = [
       loginType: "edupass"
     },
     {
-      name: "Google Mail",
-      url: "https://mail.google.com",
-      logo: "assets/images/app_logos/gmail.png",
-      description: "Student @schools email account.",
-      tags: ["Student"],
+      name: "Google Calendar",
+      url: "https://calendar.google.com",
+      logo: "assets/images/app_logos/calendar.png",
+      description: "Calendar and scheduling.",
+      tags: ["Staff", "Student"],
       loginType: "edupass"
     },
     {
@@ -120,14 +128,6 @@ const apps = [
       loginType: "edupass"
     },
     {
-      name: "Google Calendar",
-      url: "https://calendar.google.com",
-      logo: "assets/images/app_logos/calendar.png",
-      description: "Calendar and scheduling.",
-      tags: ["Staff", "Student"],
-      loginType: "edupass"
-    },
-    {
       name: "Google Forms",
       url: "https://forms.google.com",
       logo: "assets/images/app_logos/forms.png",
@@ -138,7 +138,7 @@ const apps = [
     {
       name: "Google Meet",
       url: "https://meet.google.com",
-      logo: "assets/images/app_logos/meet.png",
+      logo: "assets/images/app_logos/google-meet.svg",
       description: "Video conferencing.",
       tags: ["Staff"],
       loginType: "edupass"
