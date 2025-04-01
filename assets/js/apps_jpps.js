@@ -155,7 +155,7 @@ const apps = [
       name: "Essential Assessment",
       url: "https://app.essentialassessment.com.au/login/",
       logo: "assets/images/app_logos/essentialassessment.png",
-      description: "Staff login page.",
+      description: "Educator login page.",
       tags: ["Staff"],
       loginType: "other"
     },
@@ -179,7 +179,7 @@ const apps = [
       name: "PaperCut",
       url: "http://papercut:9191/user",
       logo: "assets/images/app_logos/papercut.png",
-      description: "Check your papercut credit balance. **double check the URL**",
+      description: "Check your papercut balance.",
       tags: ["Staff", "Student"],
       loginType: "school"
     },
@@ -187,7 +187,7 @@ const apps = [
       name: "PaperCut Admin Portal",
       url: "http://papercut:9191/admin",
       logo: "assets/images/app_logos/papercut.png",
-      description: "Admin printing dashboard. **double check the URL**",
+      description: "Admin printing dashboard.",
       tags: ["Admin"],
       loginType: "school"
     },
@@ -195,7 +195,7 @@ const apps = [
       name: "Zabbix",
       url: "#",
       logo: "assets/images/app_logos/zabbix.png",
-      description: "Network status and dashboard. **TBA**",
+      description: "Network status and dashboard.",
       tags: ["Admin"],
       loginType: "other"
     },
