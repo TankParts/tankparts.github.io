@@ -13,12 +13,12 @@
 <body>
   <header class="main-header">
     <h1>School Links</h1>
-    <div style="margin-top: 0.5rem; font-size: 0.9rem;">
-      <label style="margin-right: 1rem;">
+    <div class="header-controls">
+      <label>
         <input type="checkbox" id="hideRoleTags" />
         Hide Role Tags
       </label>
-      <label style="margin-right: 1rem;">
+      <label>
         <input type="checkbox" id="hideLoginTags" />
         Hide Login Tags
       </label>
@@ -26,9 +26,9 @@
   </header>
 
   <section class="controls">
-    <div style="position: relative; width: 100%; max-width: 400px; display: flex; align-items: center;">
-      <input type="text" id="searchInput" autocomplete="off" placeholder="Search links..." style="flex-grow: 1;" />
-      <button id="toggleTags" class="toggle-filters" title="Toggle Filters" style="margin-left: 0.5rem;">▼</button>
+    <div class="search-container">
+      <input type="text" id="searchInput" autocomplete="off" placeholder="Search links..." />
+      <button id="toggleTags" class="toggle-filters" title="Toggle Filters">▼</button>
       <ul id="autocomplete-list" class="autocomplete-list"></ul>
     </div>
 

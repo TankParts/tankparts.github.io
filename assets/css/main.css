@@ -31,22 +31,61 @@ main {
   z-index: 1;
 }
 
+.header-controls {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.header-controls label {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
 .controls {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin: 2rem 0 2rem;
+  margin: 2rem 0;
   padding: 0 1rem;
 }
 
-.controls input {
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  flex-grow: 1;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+.toggle-filters {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.tag-container {
   width: 100%;
   max-width: 400px;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tag-container.hidden {
+  display: none;
 }
 
 #tag-filters {
@@ -54,44 +93,35 @@ main {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 1rem;
 }
 
 #tag-filters label {
-  font-size: 0.95rem;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.5rem;
   cursor: pointer;
-  user-select: none;
 }
 
 .tag-actions {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  margin-top: 0.5rem;
+  gap: 1rem;
 }
 
 .tag-actions button {
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 1rem;
   border: none;
-  background: #e0e0e0;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  border-radius: 4px;
+  background: #f0f0f0;
   cursor: pointer;
-}
-
-.tag-actions button:hover {
-  background: #d5d5d5;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  align-items: stretch;
-  padding: 0 1rem 2rem;
+  padding: 1rem;
 }
 
 .card {
@@ -238,21 +268,17 @@ main {
 }
 
 .autocomplete-list {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   background: white;
   border: 1px solid #ccc;
   border-radius: 8px;
   max-height: 200px;
   overflow-y: auto;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 999;
   display: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .autocomplete-list li {
@@ -261,30 +287,7 @@ main {
 }
 
 .autocomplete-list li:hover {
-  background-color: #f0f0f0;
-}
-
-.toggle-filters {
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  font-size: 1.25rem;
-  color: #555;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.toggle-filters:hover {
-  color: #000;
-}
-
-.tag-container.hidden {
-  display: none;
+  background: #f0f0f0;
 }
 
 .autocomplete-list li.active {
