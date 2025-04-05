@@ -20,7 +20,7 @@ main {
 }
 
 .main-header {
-  background: rgba(25, 118, 210, 0.7);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -208,7 +208,7 @@ main {
 }
 
 .main-footer {
-  background: rgba(25, 118, 210, 0.7);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
   padding: 1rem;
