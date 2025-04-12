@@ -42,13 +42,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function toggleRoleTags(hide) {
   document.querySelectorAll(".badge-row").forEach(row => {
-    row.style.display = hide ? "none" : "";
+    row.classList.toggle("hidden", hide);
   });
 }
 
 function toggleLoginTags(hide) {
   document.querySelectorAll(".login-row").forEach(row => {
-    row.style.display = hide ? "none" : "";
+    row.classList.toggle("hidden", hide);
   });
 }
 
@@ -119,52 +119,54 @@ function renderApps(appList) {
 
   if (appList.length === 0) {
     container.innerHTML = `
-      <div class="no-results-wrapper">
-        <div class="speech-bubble">
+      <div class="flex flex-col items-center text-center p-8">
+        <div class="bg-white border border-gray-300 rounded-lg p-4 shadow-md">
           We couldn’t find any apps that match your search — try searching for something else!
         </div>
-        <img src="assets/images/no-results.png" alt="No matching apps" class="no-results-img" />
+        <img src="assets/images/no-results.png" alt="No matching apps" class="mt-4 w-64 h-auto" />
       </div>
     `;
     return;
-  }  
+  }
 
   const tagOrder = ["Staff", "Student", "Admin"];
 
   appList.forEach(app => {
     const card = document.createElement("article");
-    card.className = "card";
+    card.className = "bg-white rounded-lg shadow-md p-4 flex flex-col justify-between";
 
     const tooltip = document.createElement("div");
-    tooltip.className = "custom-tooltip";
+    tooltip.className = "hidden absolute bg-gray-800 text-white text-sm rounded-lg p-2 shadow-lg";
+    tooltip.style.top = "100%"; // Position the tooltip below the parent element
+    tooltip.style.left = "50%"; // Center the tooltip horizontally
+    tooltip.style.transform = "translateX(-50%)"; // Adjust for centering
     tooltip.innerHTML = getTooltipText(app);
     card.appendChild(tooltip);
 
     const link = document.createElement("a");
     link.href = app.url;
     link.target = "_blank";
-
-    const content = document.createElement("div");
-    content.style.flexGrow = "1";
+    link.className = "flex flex-col items-center";
 
     const img = document.createElement("img");
     img.src = app.logo;
     img.alt = `${app.name} logo`;
-    img.className = "app-logo";
+    img.className = "w-16 h-16 object-contain rounded-md bg-gray-100 mb-2";
 
     const h2 = document.createElement("h2");
     h2.textContent = app.name;
+    h2.className = "text-lg font-semibold text-center";
 
     const p = document.createElement("p");
     p.textContent = app.description;
+    p.className = "text-sm text-gray-600 text-center";
 
-    content.appendChild(img);
-    content.appendChild(h2);
-    content.appendChild(p);
-    link.appendChild(content);
+    link.appendChild(img);
+    link.appendChild(h2);
+    link.appendChild(p);
 
     const badgeRow = document.createElement("div");
-    badgeRow.className = "badge-row";
+    badgeRow.className = "badge-row flex justify-between gap-2 mt-2 w-full"; // Changed "flex-wrap" to "justify-between" to keep all badges on the same row
 
     const selectedTags = getSelectedTags();
     const filteredTags = selectedTags.length === 0
@@ -175,40 +177,46 @@ function renderApps(appList) {
 
     sortedTags.forEach(tag => {
       const tagBadge = document.createElement("span");
-      tagBadge.className = `category-badge ${tag}`;
+      tagBadge.className = `px-2 py-1 text-xs rounded-full ${getTagBadgeClass(tag)} text-center`; // Added "text-center" to center the text
+      tagBadge.style.flex = `1 1 ${100 / sortedTags.length}%`; // Dynamically set width based on the number of tags
       tagBadge.textContent = tag;
       badgeRow.appendChild(tagBadge);
     });
 
     const loginRow = document.createElement("div");
-    loginRow.className = "login-row";
-
-    const loginContent = document.createElement("div");
-    loginContent.style.display = "flex";
-    loginContent.style.justifyContent = "space-between";
-    loginContent.style.alignItems = "center";
-    loginContent.style.width = "100%";
+    loginRow.className = "login-row flex justify-center mt-2 w-full"; // Added "w-full" to make it take up the card's width
 
     const loginBadge = document.createElement("span");
-    loginBadge.className = "category-badge";
-    loginBadge.id = `login-${app.name.replace(/\s+/g, '-')}`;
+    loginBadge.className = "px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700 text-center w-full"; // Added "text-center" and "w-full" for full-width alignment
     loginBadge.textContent = formatLoginType(app.loginType);
 
     loginBadge.addEventListener("mouseenter", () => {
-      tooltip.style.display = "block";
+      tooltip.style.display = "block"; // Ensure the tooltip is visible
+      tooltip.style.top = `${card.offsetTop - tooltip.offsetHeight - 10}px`; // Position above the entire card with 10px padding
+      tooltip.style.left = `${card.offsetLeft + card.offsetWidth / 2}px`; // Center horizontally relative to the card
+      tooltip.style.transform = "translateX(-50%)"; // Adjust for centering
     });
+
     loginBadge.addEventListener("mouseleave", () => {
-      tooltip.style.display = "none";
+      tooltip.style.display = "none"; // Hide the tooltip
     });
 
-    loginContent.appendChild(loginBadge);
-    loginRow.appendChild(loginContent);
+    loginRow.appendChild(loginBadge);
 
-    link.appendChild(badgeRow);
-    link.appendChild(loginRow);
     card.appendChild(link);
+    card.appendChild(badgeRow);
+    card.appendChild(loginRow);
     container.appendChild(card);
   });
+}
+
+function getTagBadgeClass(tag) {
+  switch (tag) {
+    case "Staff": return "bg-blue-100 text-blue-800";
+    case "Student": return "bg-green-100 text-green-800";
+    case "Admin": return "bg-red-100 text-red-800";
+    default: return "bg-gray-100 text-gray-800";
+  }
 }
 
 function getSelectedTags() {

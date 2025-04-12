@@ -8,49 +8,49 @@
   <link rel="icon" href="assets/assets/images/icons/favicon.ico" type="image/x-icon">
   <link rel="icon" type="assimage/png" sizes="32x32" href="assets/images/icons/favicon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/favicon-512.png">
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="main-header">
-    <h1>School Links</h1>
-    <div style="margin-top: 0.5rem; font-size: 0.9rem;">
-      <label style="margin-right: 1rem;">
+<body class="flex flex-col min-h-screen bg-gray-100">
+  <header class="bg-blue-600 text-white p-6 text-center shadow-md">
+    <h1 class="text-2xl font-bold">School Links</h1>
+    <div class="mt-2 text-sm">
+      <label class="mr-4">
         <input type="checkbox" id="hideRoleTags" />
         Hide Role Tags
       </label>
-      <label style="margin-right: 1rem;">
+      <label class="mr-4">
         <input type="checkbox" id="hideLoginTags" />
         Hide Login Tags
       </label>
     </div>
   </header>
 
-  <section class="controls">
-    <div style="position: relative; width: 100%; max-width: 400px; display: flex; align-items: center;">
-      <input type="text" id="searchInput" autocomplete="off" placeholder="Search links..." style="flex-grow: 1;" />
-      <button id="toggleTags" class="toggle-filters" title="Toggle Filters" style="margin-left: 0.5rem;">▼</button>
-      <ul id="autocomplete-list" class="autocomplete-list"></ul>
+  <section class="flex flex-col items-center gap-4 my-8 px-4">
+    <div class="relative w-full max-w-md flex items-center">
+      <input type="text" id="searchInput" autocomplete="off" placeholder="Search links..." class="flex-grow p-2 border border-gray-300 rounded-lg" />
+      <button id="toggleTags" class="ml-2 text-lg text-gray-600 hover:text-black" title="Toggle Filters">▼</button>
+      <ul id="autocomplete-list" class="absolute top-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-md hidden"></ul>
     </div>
 
-    <div id="tag-container" class="tag-container hidden">
-      <div id="tag-filters">
+    <div id="tag-container" class="hidden flex flex-col items-center gap-4">
+      <div id="tag-filters" class="flex flex-wrap gap-4 justify-center">
         <label><input type="checkbox" value="Staff" class="tag-checkbox"> Staff</label>
         <label><input type="checkbox" value="Student" class="tag-checkbox"> Student</label>
         <label><input type="checkbox" value="Admin" class="tag-checkbox"> Admin</label>
       </div>
 
-      <div class="tag-actions">
-        <button id="selectAll">Select All</button>
-        <button id="clearAll">Clear All</button>
+      <div class="flex gap-4">
+        <button id="selectAll" class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">Select All</button>
+        <button id="clearAll" class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">Clear All</button>
       </div>
     </div>
   </section>
 
-  <main>
-    <section class="card-grid" id="app-container"></section>
+  <main class="flex-1">
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4" id="app-container"></section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="bg-blue-600 text-white text-center p-4 shadow-md">
     <p>v1</p>
   </footer>
 
