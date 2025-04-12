@@ -9,21 +9,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url('../images/background/beautiful_straight_line_yellow_autumn_fall_trees_park_hd_nature-1920x1080.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: #f4f6f8;
   overflow-x: hidden;
-}
-
-/* Add a semi-transparent overlay to improve text readability */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: -1;
 }
 
 main {
@@ -33,19 +20,15 @@ main {
 }
 
 .main-header {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   padding: 1.5rem 1rem;
   text-align: center;
   width: 100%;
   margin: 0;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
   position: relative;
   z-index: 1;
-}
-
-.main-header h1 {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-controls {
@@ -142,13 +125,12 @@ main {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -157,8 +139,7 @@ main {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
 }
 
 .card a {
@@ -170,12 +151,13 @@ main {
 }
 
 .card h2 {
-  color: #333;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.3rem;
 }
 
 .card p {
-  color: #666;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .app-logo {
@@ -256,11 +238,11 @@ main {
 }
 
 .main-footer {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
   padding: 1rem;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
   position: relative;
   z-index: 1;
 }
